@@ -1,5 +1,7 @@
 package Prac06;
 
+import java.awt.print.Book;
+
 public class Day06 {
     /*
     public static void main(String[] args) {
@@ -46,6 +48,7 @@ public class Day06 {
         잘 만들어놓아야만 다른 코드에 안좋은 영향을 주지 않고, 튼튼한 프로그래밍을 할 수 있다.
      */
 
+    /*
     // 채널 오르락내리락하기
     public static void main(String[] args) {
         Tv tv = new Tv();
@@ -53,5 +56,46 @@ public class Day06 {
         tv.channelDown();
         System.out.println("현재 채널은 " + tv.channel + "번 입니다.");
     }
+     */
+
+    //퀴즈 01.
+    // Book 클래스 만들고 멤버변수로 4개 선언하기 (title, author, publisher, price)
+    // 멤버변수의 접근제어자는 public (접근제어자) 으로 하기
+    // 메인클래스에서 Book클래스를 이용하여 인스턴스를 만들기
+    // 값을 넣어서 출력해보기
+    // 기본생성자 만들기
+
+            // 1-1
+
+            // 파라미터 4개짜리 생성자 만들기
+            // 파라미터가 4개짜리인 생성자를 통해 객체 만들기
+            // 메인 클래스에서 변수와 값을 선언하고 파라미터 4개를 넘겨받는 방식으로 출력해보기
+
+    public static void main(String[] args) {
+// 1-1.
+            Book06 book1 = new Book06();
+            book1.title = "타이탄의 도구들";
+            book1.author = "ABC";
+            book1.publisher = "교보문고";
+            book1.price = 23000;
+
+            System.out.println(book1.title);
+            System.out.println(book1.author);
+            System.out.println(book1.publisher);
+            System.out.println(book1.price);
+            System.out.println("내가 산 책은 " + book1.title+"이고, "+ "작가는 "+ book1.author +" 이다.");
+
+//1-2.
+            String title ="타이탄의 도구들";
+            String author ="ABC";
+            String publisher = "교보문고";
+            int price = 23000;
+
+             Book06 book2 = new Book06(title, author, publisher, price);
+             System.out.println(title);
+             System.out.println(author);
+             System.out.println(publisher);
+             System.out.println(price);
+        }
 
 }
