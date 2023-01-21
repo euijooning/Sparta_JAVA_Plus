@@ -46,7 +46,7 @@ public class Day01 {
     }
 
      */
-
+/*
 // 코드의 흐름
 public static void main(String[] args) {
 
@@ -56,6 +56,35 @@ public static void main(String[] args) {
         System.out.println(str);
     }
 // 컴파일시 코드는 아래서 흐르니까 변수에 값이 바뀐 시점에 이렇게 변경된 값을 출력해 줍니다.
+ */
+
+// 기본자료형 (몇가지 예)
+    //char는 문자 하나를 담는 자료형으로 이렇게 작은 따옴표를 붙여서 작성을 합니다.
+    // 2바이트의 저장공간을 차지합니다.
+
+    public static void main(String[] args) {
+
+
+        char c = 'A';
+        int a = 10;
+        double b = 1.234;
+        float d = 1.234F;
+
+        System.out.println(c);
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(d);
+
+
+
+// 자료형의 출력 범위 알아보기
+
+
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println(Integer.MIN_VALUE);
+        System.out.println(Float.MAX_VALUE);
+        System.out.println(Float.MIN_VALUE);
+    }
 }
 
 
