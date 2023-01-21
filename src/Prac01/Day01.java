@@ -92,6 +92,7 @@ public static void main(String[] args) {
 // +- */%
     // 예1)
 
+    /*
     public static void main(String[] args) {
 
 
@@ -108,6 +109,33 @@ public static void main(String[] args) {
 
     // 여기서  +는 연결과 연산으로 두가지로 기능을 합니다.
     // 하나는 덧셈의 연산 이고 타입이 다를경우 두개를 연결 시켜주기도 합니다.
+     */
+
+    // 연산자 실습
+
+    public static void main(String[] args) {
+
+
+        int n1 = 20;
+        int n2 = 30;
+        int n3 = 2;
+
+        n1 += n2;
+        System.out.println(n1);
+        // n1+n2 = n1; 의 의미
+
+        n1 -=n3;
+        System.out.println(n1);
+        // n1 - n3 = n1; 의 의미
+
+        n1 /=n3;
+        System.out.println(n1);
+        // n1 / n3 = n1; 의 의미
+
+        n1/=n1;
+        System.out.println(n1);
+    }
+
 }
 
 
