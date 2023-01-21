@@ -33,6 +33,7 @@ public class Day01 {
 // 변수의 선언방식
 // 자료형 변수명 = 값; //변수의 선언과 코드의 흐름
 
+    /*
     public static void main(String[] args) {
 
 
@@ -43,6 +44,18 @@ public class Day01 {
         System.out.println(str);
         System.out.println(num);
     }
+
+     */
+
+// 코드의 흐름
+public static void main(String[] args) {
+
+        String str  ="오늘은 화요일";
+        // 하나의 스코프(예){}) 안에서는 기존요소의 값을 덮어쓸수 있습니다.
+
+        System.out.println(str);
+    }
+// 컴파일시 코드는 아래서 흐르니까 변수에 값이 바뀐 시점에 이렇게 변경된 값을 출력해 줍니다.
 }
 
 
