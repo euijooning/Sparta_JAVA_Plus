@@ -28,4 +28,16 @@ public class MathTest {
         }
         return result;
     }
+    //가변인수 : 변수의 크기가 가변적일 수 있는 인수
+    // 자료형 뒤에 ... 입력하고, 배열 이름을 입력하면 된다.
+
+    // 나 두 개 짜리 해줘, 다섯개 짜리 해줘... 열 개 짜리 해줘 하더라도 이 메서드 하나를 통해서 다 계산이 가능하다는 이야기
+    public int total(int... a) {
+        // 작성 방법은  똑같다.
+        int result = 0;
+        for (int i = 0; i < a.length; i++) {
+            result += a[i];
+        }
+        return result;
+    }
 }

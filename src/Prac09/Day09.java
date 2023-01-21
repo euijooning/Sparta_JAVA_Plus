@@ -8,6 +8,9 @@ public class Day09 {
         System.out.println("add(1,2,3) : " + mt.add(new int[] {1,2,3}));
         System.out.println("add(1,2,3,4) : " + mt.add(new int[] {1,2,3,4}));
 
+        // 가변인수 실행
+        System.out.println("add(1,2,3,4,5,6) : " + mt.total(1,2,3,4,5,6));
+        System.out.println("add(1,2,3,4,5,6,7,8,9,10) : " + mt.total(1,2,3,4,5,6,7,8,9,10));
     }
     /*
     같은 기능을 수행하는 메서드의 경우 인수가 서로 다를 경우 많은 수의 메서드 오버로딩이 필요하게 되는데, 그 때에 매번마다 오버로딩을 해줘야 한다.
