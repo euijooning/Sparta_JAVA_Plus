@@ -79,6 +79,7 @@ public class Day02 {
      */
 
 // == 과 equals //reference type
+    /*
 public static void main(String[] args) {
 
 
@@ -94,4 +95,37 @@ public static void main(String[] args) {
         System.out.println(text3 == text4);            //false --> 주솟값 비교를 하기 때문에!!!
         System.out.println(text3.equals(text4));    //true
     }
-}
+     */
+// 배열
+// 원격강의자료 복습
+
+// 배열요소에 값을 넣으려면 어떻게 해야할지 작성을 해보세요.
+// 이 문제는 배열을 생성한 후에 데이터 값을 입력하는 방법에 대해 아는 문제 입니다.
+/*
+        //[1]배열선언
+        int[] num = new int[5]; // 선언과 동시에 크기 지정해준다.
+        //[2] 선언한 배열공간에 값 입력하기
+        num[0] = 3;
+//      num[0] = 35; //배열변수[인덱스] = 값 의 형태로 기존 요소의 값을 덮어쓸 수 있습니다.
+        num[1] = 11;
+        num[2] = 22;
+        num[3] = 33;
+        num[4] = 44;
+
+        //[3] 값출력하기
+        System.out.println(num[0]);
+        System.out.println(num[1]);
+        System.out.println(num[2]);
+        System.out.println(num[3]);
+        System.out.println(num[4]);
+        System.out.println(num[num.length - 1]); // 길이보다 하나 작은 위치에 있는 값 : 여기서는 44
+        // 길이를 구할때
+        System.out.println(num.length);
+
+        // 아니면 아예 선언하면서 초기값을 줄 수도 있다.
+        int[] num2 = {100, 200, 300, 400};
+        System.out.println(num2); //이건 주솟값이 나왔어 : 보니까 완전 이상한 숫자네
+        System.out.println(Arrays.toString(num2)); // 배열의 요소 출력 -> toString
+ */
+ }
+
