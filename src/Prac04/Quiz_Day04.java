@@ -43,7 +43,7 @@ public class Quiz_Day04 {
     // 힌트 : 각 숫자들을 변수에다 담아줄 것이고, 숫자의 홀짝을 판별하게 되고,
     // 출력할 때에는 각각의 개수가 계산되어 나오도록 짝수, 홀수 변수도 나오게 만들어야한다.
 
-
+/*
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("숫자를 10개 입력해주세요:  ");
@@ -62,6 +62,17 @@ public class Quiz_Day04 {
             }
         }
         System.out.println("짝수의 개수: " + even + "  홀수의 개수: "  + odd); // for문 다 끝난 후에 써줘야하지.
+    }
+
+ */
+    //퀴즈 04. 구구단 출력하기
+    public static void main(String[] args) {
+        for(int i = 2; i < 10; i++) {
+             for(int j = 1; j < 10; j++) {
+                System.out.println(i + " * " + j + " = " + (i * j));
+            }
+                System.out.println();// 단마다 개행을 위한 한 줄 비움
+         }
     }
 }
 
