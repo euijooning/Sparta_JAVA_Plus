@@ -1,5 +1,5 @@
 package Prac09;
-
+// public class Day09{
 
     /*
     public static void main(String[] args) {
@@ -42,6 +42,7 @@ package Prac09;
     }
 
  */
+/*
 // 오버라이딩 개념 체크 퀴즈!
 // 오버로딩과 오버라이딩 개념 체크 퀴즈!
 class Parent {
@@ -65,4 +66,8 @@ public class Day09 {
     /*
 오버라이딩이라 함은, 부모클래스에 있는 메서드를 자식클래스에서 사용할 때, 그 자식에 맞게 변경해서 사용하는 경우를 말한다.
  */
+//}
+public class Day09 {
+
 }
+
