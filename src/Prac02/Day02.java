@@ -1,5 +1,7 @@
 package Prac02;
 
+import java.util.Scanner;
+
 public class Day02 {
 /*
     public static void main(String[] args) {
@@ -32,11 +34,29 @@ public class Day02 {
     }
  */
 //실습01. 삼항연산자를 이용하여 12시보다 작으면 오전, 크면 오후를 출력
-
+/*
     public static void main(String[] args) {
         int h = 11;
         String result2 = (h<12) ? "오전" : "오후";
         System.out.println(result2);
 
+    }
+ */
+
+    //실습02. 알파벳 출력하기
+
+    public static void main(String[] args) {
+
+
+    Scanner scanner = new Scanner(System.in);
+        System.out.println("알파벳을 입력하세요:  ");
+
+    char alpha = scanner.nextLine().charAt(0); //charAt은 문자를 하나하나 출력하는 내장함수.
+    int ialpha = (int) alpha; // 문자열로 받았으니, alpha를 강제 형변환하여 새로운 변수에 저장.
+        System.out.println(ialpha);
+
+    // 출력 예시
+    String str = "안녕하세요";
+        System.out.println(str.charAt(1));
     }
 }
