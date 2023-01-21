@@ -28,7 +28,7 @@ public class Day03 {
 
      */
     //삼항연산자로 출력하기
-
+/*
     public static void main(String[] args) {
 
          int age = 25;
@@ -36,4 +36,25 @@ public class Day03 {
          System.out.println(result);
 
     }
+*/
+
+// switch문은 구간처리가 좀 더 명확한 경우에 사용할 수 있다는 것.
+    public static void main(String[] args) {
+
+
+        char score = 'A';
+        switch (score) {
+            case 'A' :
+                System.out.println("A등급");
+                break;
+            case 'B' :
+                System.out.println("B등급");
+                break;
+            default :
+                System.out.println("F등급");
+        }
+    }
+
+
+
 }
