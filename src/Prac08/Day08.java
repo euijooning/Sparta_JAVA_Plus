@@ -1,7 +1,5 @@
 package Prac08;
 
-import Prac06.Course;
-
 public class Day08 {
     /*
 개념설명
@@ -68,7 +66,24 @@ public String getTitle(String title) {
     // setter을 이용하여 값을 넣는 문법을 구현하고 getter를 활용하여 책 한권의 정보를
     // 출력하는 화면을 구현합니다.
 
+    public static void main(String[] args) {
+        String title = "데미안";
+        String author = "헤르만 헤세";
+        String publisher = "민음사";
+        int price = 20000;
 
+        Book book = new Book();
+        book.setTitle(title);
+        book.setAuthor(author);
+        book.setAuthor(author);
+        book.setPrice(price);
+
+        System.out.println(book.getTitle(title));
+        System.out.println(book.getAuthor(author));
+        System.out.println(book.getTitle(publisher));
+        System.out.println(book.getPrice(price));
+
+    }
 
 }
 
