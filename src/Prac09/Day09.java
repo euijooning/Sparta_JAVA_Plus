@@ -120,7 +120,23 @@ Polymorphism
         여러 형태를 받아들일 수 있는 성질, 상황에 따라 의미를 다르게 부여할 수 있는 특성 등으로 정의를 하기도 한다. 정리하면 다형성이란 하나의 타입에 여러 객체를 대입할 수 있는 성질로 이해하면 될 것이다.
 */
 
-public class Day09 {
+//다형성 예시
 
+import javax.swing.*;
+
+class Person {}
+
+class Student extends Person {}
+
+public class Day09 {
+    public static void main(String[] args) {
+        Student s1 = new Student(); // 첫 번째 예시, 정상 작동
+
+        Person s2 = new Student(); // 두 번째 예시 정상, 하위 클래스로 객체 생성하면서 타입은 부모타입으로 만든다.
+
+        Person parent = new Person(); // 세 번째 예시, 정상, 자기 자신을 가져와서 만드는 거니까 아무 문제 없지
+
+        // 에러! Student stu = new Person(); => 상위 클래스로 객체 생성하면서 타입은 하위 쓰면 무조건 에러.
+    }
 }
 
