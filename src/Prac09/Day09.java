@@ -120,9 +120,8 @@ Polymorphism
         여러 형태를 받아들일 수 있는 성질, 상황에 따라 의미를 다르게 부여할 수 있는 특성 등으로 정의를 하기도 한다. 정리하면 다형성이란 하나의 타입에 여러 객체를 대입할 수 있는 성질로 이해하면 될 것이다.
 */
 
+/*
 //다형성 예시
-
-import javax.swing.*;
 
 class Person {}
 
@@ -138,5 +137,67 @@ public class Day09 {
 
         // 에러! Student stu = new Person(); => 상위 클래스로 객체 생성하면서 타입은 하위 쓰면 무조건 에러.
     }
+*/
+
+//다형성 예시 2
+class Person{
+    String str1 = "난부모 클래스";
+    void method1() {System.out.println("에이에이에이");}
+    // 부모클래스의 독자적 메서드
+    void ppp() {System.out.println("ppp");}
 }
+
+
+class Student extends Person{
+    String str2 = "난자식 클래스";
+    // 그 내용을 덮어쓴것, 재정의해서 사용하겠다
+    void method1() {System.out.println("오버라이딩-AAA");}
+    void sss() {System.out.println("sss");}
+
+    // 마지막
+    void x(){
+        method1(); // 위의 메서드1 을 호출하는 것
+        super.method1(); // 슈퍼는 부모를 가르키는것. 부모의 메서드를 자식 클래스에서 가져올 수 있음
+    }
+}
+public class Day09 {
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+        System.out.println(s1.str1);
+        System.out.println(s1.str2);
+        s1.method1();
+        s1.sss();
+        // 자식클래스에 있는 모든 자원 사용이 가능하다.
+        // 부모클래스에 있는 모든 자원 사용이 가능하다.
+        s1.ppp();
+        // 여기서 질문! 자식클래스에서 오버라이딩 된 브모클래스의 원본 메서드를 호출하고 싶다면? > 슈퍼
+// d위의 void x 클래스 에서의 method1에 슈퍼를 붙이면 된다.
+        s1.x();
+
+
+
+// 정상, 하위 클래스로 객체를 만들면서 타입은 부모타입을 쓰는것이 가능(다형성) , 부모의 자원만 쓸수 있다(?)
+        Person s2 = new Student();
+        System.out.println(s2.str1);
+//        System.out.println(s2.str2); //err
+        s2.ppp();
+//        s2.sss(); // 자식의 자원을 쓸수 없다.
+        s2.method1(); // 오버라이딩 - AAA --> 오버라이딩한거는 자식의 메서드로 실행.
+
+        // 부모클래스에 없는 자식의 메서드를 바로 호출하고 싶다면? --> 캐스트 필요
+        ((Student)s2).sss();
+
+
+// 정상
+        Person aaa = new Person();
+        aaa.method1();// 에이에이에이
+        //aaa.sss();
+
+
+        // 상위 클래스로 객체를 생성하면서 타입은 하위타입을 쓰는경우는 에러
+//        Student bbb = new Person();
+    }
+}
+
 
