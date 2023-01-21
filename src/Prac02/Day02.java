@@ -1,5 +1,6 @@
 package Prac02;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Day02 {
@@ -127,5 +128,20 @@ public static void main(String[] args) {
         System.out.println(num2); //이건 주솟값이 나왔어 : 보니까 완전 이상한 숫자네
         System.out.println(Arrays.toString(num2)); // 배열의 요소 출력 -> toString
  */
- }
+// 실습 : 봄, 여름, 가을, 겨울을 넣고 출력하라
+    public static void main(String[] args) {
+
+
+    String[] season = new String[4];
+    season[0] = "봄";
+    season[1] = "여름";
+    season[2] = "가을";
+    season[3] = "겨울";
+
+    //또는
+    String[] season1 = {"봄", "여름", "가을", "겨울"};
+        System.out.println(Arrays.toString(season1));
+    }
+
+}
 
