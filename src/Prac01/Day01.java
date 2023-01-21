@@ -57,7 +57,7 @@ public static void main(String[] args) {
     }
 // 컴파일시 코드는 아래서 흐르니까 변수에 값이 바뀐 시점에 이렇게 변경된 값을 출력해 줍니다.
  */
-
+/*
 // 기본자료형 (몇가지 예)
     //char는 문자 하나를 담는 자료형으로 이렇게 작은 따옴표를 붙여서 작성을 합니다.
     // 2바이트의 저장공간을 차지합니다.
@@ -85,6 +85,29 @@ public static void main(String[] args) {
         System.out.println(Float.MAX_VALUE);
         System.out.println(Float.MIN_VALUE);
     }
+ */
+
+
+    //산술 연산자
+// +- */%
+    // 예1)
+
+    public static void main(String[] args) {
+
+
+        int num1 = 10;
+        int num2 = 3;
+
+        System.out.println(num1+num2);
+        System.out.println(num1-num2);
+        System.out.println(num1*num2);
+        System.out.println(num1/num2);
+        System.out.println(num1%num2);
+
+    }
+
+    // 여기서  +는 연결과 연산으로 두가지로 기능을 합니다.
+    // 하나는 덧셈의 연산 이고 타입이 다를경우 두개를 연결 시켜주기도 합니다.
 }
 
 
