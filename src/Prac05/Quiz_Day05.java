@@ -50,6 +50,7 @@ public class Quiz_Day05 {
   홀/짝 출력하는 함수 작성!
  */
 
+    /*
 
     // 직사각형의 넓이(양변의 곱이므로.)
     public static int f1(int x, int y) {
@@ -104,6 +105,25 @@ public class Quiz_Day05 {
         int n = sc.nextInt();
         f3(n); // 그냥 함수만 호출하면 콘솔에서 결과를 볼 수 있다.
     }
+     */
 
+    // 퀴즈 3
+// a를 입력받아 1~a까지의 합을 리턴하는 함수를 만듦.
+// 해당 메소드를 호출하여 연산결과를 인쇄하는 프로그램
+    public static int function(int a) {
+        // 여기서는 우리가 1에서 a까지를 돌면서 그 누적 결과의 합을 반환해주는 함수를 만들어야 할텐데요.
+        // for문과 result가 필요하겠지!
+        int result1 = 0;
+        for(int i = 1; i <= a; i++) {
+            result1 += i;
+        }
+        return result1;
+    }
+    public static void main(String[] args) {
+        // Scanner 사용하지 않고, n값을 직접 지정한다.
+        int a = 10;
+        int sum = function(a); // 결과를 직접 보기 위한 함수.
+        System.out.println("1부터 " + a + "까지의 합은 " + sum + " 입니다!");
 
+    }
 }
