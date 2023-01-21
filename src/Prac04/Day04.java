@@ -49,7 +49,7 @@ public class Day04 {
         }
     }
  */
-
+/*
 // [퀴즈] 1부터 10까지의 합 출력
     public static void main(String[] args) {
         int sum = 0;
@@ -59,4 +59,23 @@ public class Day04 {
         }
         System.out.println(sum);
     }
+ */
+
+    // for- each문 : 각각 하나씩을 돌면서 꺼내와줘!
+
+    public static void main(String[] args) {
+        String[] seasons = {"봄", "여름", "가을", "겨울"};
+
+        for (String season : seasons) {// season은 for을 통해서 담을 변수 season은 꺼내올 곳 / 즉 seasons에서 꺼내서 하나씩 season에 담아줘.
+            System.out.println(season);
+        }
+    }
+
+
+    /*
+for-each문은 삼항연산자와 생긴 게 비슷하다고 느끼시는 분들이 있을 텐데요.
+삼항연산자는 자료형이랑 변수명을 사용하고, 조건식을 쓰고, 참일 때 실행 코드, 거짓일 때 실행 코드를 사용했다면,
+for-each문은 콜론을 기준으로 내가 담을 변수를 자료형과 함께 선언해주고, 기존에 있던 변수에서 하나씩 꺼내오는 형태로 쓰게 된다.
+ */
+
 }
