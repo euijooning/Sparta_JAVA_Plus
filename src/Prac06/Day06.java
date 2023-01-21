@@ -46,4 +46,12 @@ public class Day06 {
         잘 만들어놓아야만 다른 코드에 안좋은 영향을 주지 않고, 튼튼한 프로그래밍을 할 수 있다.
      */
 
+    // 채널 오르락내리락하기
+    public static void main(String[] args) {
+        Tv tv = new Tv();
+        tv.channel = 7;
+        tv.channelDown();
+        System.out.println("현재 채널은 " + tv.channel + "번 입니다.");
+    }
+
 }
