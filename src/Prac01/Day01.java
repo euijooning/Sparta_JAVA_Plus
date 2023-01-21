@@ -1,5 +1,7 @@
 package Prac01;
 
+import java.util.Scanner;
+
 public class Day01 {
     /*
     public static void main(String[] args) {
@@ -154,6 +156,32 @@ public static void main(String[] args) {
 
     }
 */
+    //Scanner
+
+    // 자바에서 화면으로부터 데이터를 입력받는 기능을 제공하는 클래스
+    // java.util 패키지 내에 존재하는 클래스로서 정수, 실수,
+    // 문자열과 같은 기본적인 데이터 타입 입력을 받는다.
+
+    public static void main(String[] args) {
+
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("당신이 사는 도시는?");
+        String city = sc.nextLine();
+        System.out.println("사용자는 "+ city+ "에 삽니다.");
+
+    }
+
+    // 오늘 공부한것 간략히 키워드
+    // 출력하기
+    // 변수란, (변할 수 있는 값을 저장하는 저장공간)
+    // 오른쪽의 값은 왼쪽저장공간에 담긴다.
+    // 상수 & 키워드
+    // 자료형
+    // 연산자 일부
+    // 스캐너
+    // 코드는 위에서 아래로 흐른다
 
 }
 
