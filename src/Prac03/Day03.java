@@ -57,6 +57,7 @@ public class Day03 {
         }
     }
  */
+    /*
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -71,6 +72,28 @@ public class Day03 {
             System.out.println("C등급입니다.");
         } else {
             System.out.println("F등급입니다.");
+        }
+    }
+
+     */
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("점수를 입력하세요: ");
+        int score1 = sc.nextInt();
+
+        switch ((int) score1 / 10) {
+            case 10:
+                System.out.println("A+입니다");
+                break;
+            case 9:
+                System.out.println("A입니다");
+                break;
+            case 8:
+                System.out.println("B입니다");
+            default:
+                System.out.println("F입니다.");
         }
     }
 }
