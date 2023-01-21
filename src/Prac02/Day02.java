@@ -1,6 +1,8 @@
 package Prac02;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Day02 {
@@ -129,6 +131,7 @@ public static void main(String[] args) {
         System.out.println(Arrays.toString(num2)); // 배열의 요소 출력 -> toString
  */
 // 실습 : 봄, 여름, 가을, 겨울을 넣고 출력하라
+    /*
     public static void main(String[] args) {
 
 
@@ -143,5 +146,34 @@ public static void main(String[] args) {
         System.out.println(Arrays.toString(season1));
     }
 
+
+//List 설명
+/* 정보를 묶을 때 List 라는 녀석을 사용합니다. 세 가지를 기억하시면 돼요.
+1. 순서가 중요한 녀석이에요!
+2. 같은 자료형만 넣을 수 있어요
+3. 넣을 때는 add, 조회할 때는 get, 제거할 때는 remove를 사용합니다.
+*/
+
+
+        //리스트는 초기에 크기가 정해져있는게 아니라, 가변적으로 변할 수 있게 됨
+        public static void main(String[] args) {
+
+
+        List<String> fruits = new ArrayList<>();
+        fruits.add("감");
+        fruits.add("배");
+        fruits.add("감");
+        fruits.add("딸기");
+        fruits.add("수박");
+        fruits.add("메론");
+        fruits.add("수박");
+        fruits.add("딸기");
+        fruits.add("메론");
+        fruits.add("수박");
+        fruits.add("메론");
+        fruits.add("수박");
+        fruits.add("감");
+        System.out.println(fruits);
+   }
 }
 
