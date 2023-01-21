@@ -1,9 +1,6 @@
 package Prac02;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Day02 {
 /*
@@ -178,6 +175,7 @@ public static void main(String[] args) {
  */
 
     //        과일 목록 차례대로 인쇄하기 - 반복문 없이
+    /*
     public static void main(String[] args) {
 
         List<String> fruits = new ArrayList<>();
@@ -205,5 +203,41 @@ public static void main(String[] args) {
 
         }
     }
+
+     */
+
+    // 마지막 퀴즈
+    //1. 배열을 선언하여 숫자 5개를 받는다.
+    //2. 숫자 5개를 입력받는다.
+    //3. 입력받은 숫자를 역순으로 출력한다.
+    public static void main(String[] args) {
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("숫자 5개를 띄어쓰기로 구분해서 입력해 주세요.");
+
+        int[] value = new int[5];
+
+        for (int i = 0; i <5; i++) {
+            value[i] = sc.nextInt();
+        } // 0번째 방부터 돌면서 들어온 값들을 하나하나 저장해준다.
+
+        // 이제 거꾸로 담을 때에는 끝에서부터 배열의 값을 출력한다.
+        for (int i = 4; i>=0; i--) {
+            System.out.println(value[i]);
+        }
+        //Math.random(): 0 이상이고 1 미만인 무작위수를 발생시킨다.
+        System.out.println((int) (Math.random() * 6) + 1);
+//        (1~6 중에 하나 랜덤. int형이므로 ) 여기서 +1 을 해준 이유는 0부터 시작하니까
+
+//		Random 클래스의 객체를 사용한다.
+        Random random = new Random();
+        System.out.println(random.nextDouble());
+        System.out.println(random.nextInt());
+        System.out.println(random.nextInt(6) + 1);
+    }
+
 }
+
+
 
