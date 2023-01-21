@@ -154,7 +154,7 @@ public static void main(String[] args) {
 3. 넣을 때는 add, 조회할 때는 get, 제거할 때는 remove를 사용합니다.
 */
 
-
+/*
         //리스트는 초기에 크기가 정해져있는게 아니라, 가변적으로 변할 수 있게 됨
         public static void main(String[] args) {
 
@@ -175,5 +175,35 @@ public static void main(String[] args) {
         fruits.add("감");
         System.out.println(fruits);
    }
+ */
+
+    //        과일 목록 차례대로 인쇄하기 - 반복문 없이
+    public static void main(String[] args) {
+
+        List<String> fruits = new ArrayList<>();
+        System.out.println(fruits.get(0));
+        System.out.println(fruits.get(1));
+        System.out.println(fruits.get(2));
+        System.out.println(fruits.get(3));
+        System.out.println(fruits.get(4));
+        System.out.println(fruits.get(5));
+        System.out.println(fruits.get(6));
+        System.out.println(fruits.get(7));
+        System.out.println(fruits.get(8));
+        System.out.println(fruits.get(9));
+        System.out.println(fruits.get(10));
+        System.out.println(fruits.get(11));
+        System.out.println(fruits.get(12));
+
+        fruits.remove(0);
+        System.out.println(fruits.get(0));
+
+//        과일 목록 차례대로 인쇄하기 - 반복문과 함께 : for문 이용
+        for (int i = 0; i < fruits.size() ; i++) {
+        String fruit = fruits.get(i);
+        System.out.println(fruit);
+
+        }
+    }
 }
 
