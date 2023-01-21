@@ -14,7 +14,7 @@ public class Day03 {
         }
     }
      */
-
+    /*
     public static void main(String[] args) {
         //퀴즈
 
@@ -24,5 +24,16 @@ public class Day03 {
         } else {
             System.out.println("청소년입니다.");
         }
+    }
+
+     */
+    //삼항연산자로 출력하기
+
+    public static void main(String[] args) {
+
+         int age = 25;
+         String result = (age>=19) ? "성인입니다" : "청소년입니다";
+         System.out.println(result);
+
     }
 }
