@@ -60,7 +60,7 @@ public class Day04 {
         System.out.println(sum);
     }
  */
-
+/*
     // for- each문 : 각각 하나씩을 돌면서 꺼내와줘!
 
     public static void main(String[] args) {
@@ -70,12 +70,34 @@ public class Day04 {
             System.out.println(season);
         }
     }
-
-
+ */
     /*
 for-each문은 삼항연산자와 생긴 게 비슷하다고 느끼시는 분들이 있을 텐데요.
 삼항연산자는 자료형이랑 변수명을 사용하고, 조건식을 쓰고, 참일 때 실행 코드, 거짓일 때 실행 코드를 사용했다면,
 for-each문은 콜론을 기준으로 내가 담을 변수를 자료형과 함께 선언해주고, 기존에 있던 변수에서 하나씩 꺼내오는 형태로 쓰게 된다.
  */
 
+
+// while문
+    // while   VS   for
+    // while: 반복횟수가 불확실할때, 무한히 반복해야 할 때
+    // for: 명확할때, 배열과 함께
+
+    // 코드의 간략화,간소화
+    // 코드의 재사용성 증가 << 비용 절감
+
+    // for문 문법
+    // for(시작조건(초기식); 반복을 계속할조건(종결식); 더하기(증감식)) {실행문}
+
+    // 문제 : for문처럼, 1에서 10까지 더하는 프로그램을 작성하시오.
+    public static void main(String[] args) {
+        int i = 0;
+        int sum1 = 0;
+
+        while(i<10) { //괄호 안에 범위가 들어가지 않고 조건식이 들어간다.
+            sum1 += (i+1);
+            i++; // 이게 없으면 무한루프를 돈다.
+        }
+        System.out.println(sum1);
+    }
 }
