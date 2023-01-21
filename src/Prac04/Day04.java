@@ -3,6 +3,8 @@ package Prac04;
 import java.util.Scanner;
 
 public class Day04 {
+
+    /*
     //3일차 마지막 뮈즈
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -17,6 +19,33 @@ public class Day04 {
         } else {
             System.out.println("잘못 입력 하셨습니다. ");
 
+        }
+    }
+
+     */
+
+    // while문 사용
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        //변수 선언
+        int num = 0;
+        while (num != 3) {
+            System.out.println("다음 중 프로그래밍 언어가 아닌것은?");
+            System.out.println("1. Javascript\n2. Java\n3. 망둥어\n4. HTML\n0.프로그램에서 나가기 " );
+            num = sc.nextInt();
+
+            if (num == 3) {
+                System.out.println("정답입니다.");
+            } else if (num == 1 || num == 2 || num == 4) {
+                System.out.println("오답입니다.");
+            } else if (num==0) {
+                System.out.println("프로그램에서 나갑니다.");
+                break;
+            } else {
+                System.out.println("잘못 입력 하셨습니다. ");
+
+            }
         }
     }
 }
