@@ -20,7 +20,7 @@ public class Day02 {
         System.out.println('a' + "-" + 32 + "=" + (char) ('a' - 32));
     }
  */
-
+/*
     // 삼항 연산자
     // 조건식 ? 참 : 거짓 ;
     public static void main(String[] args) {
@@ -29,5 +29,14 @@ public class Day02 {
     int c = 5;
     String result = (c<10) ? "10보다 작다" : "10보다 크다";
         System.out.println(result);
+    }
+ */
+//실습01. 삼항연산자를 이용하여 12시보다 작으면 오전, 크면 오후를 출력
+
+    public static void main(String[] args) {
+        int h = 11;
+        String result2 = (h<12) ? "오전" : "오후";
+        System.out.println(result2);
+
     }
 }
