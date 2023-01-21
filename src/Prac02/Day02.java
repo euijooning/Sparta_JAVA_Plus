@@ -62,6 +62,7 @@ public class Day02 {
  */
 
     // 전위 연산자와 후위 연산자
+    /*
     public static void main(String[] args) {
 
         int a = 10;
@@ -74,5 +75,23 @@ public class Day02 {
     b = ++a;
         System.out.println(b); // b=12
         System.out.println("a =" + a + " b=  "+ b); //a=12, b=12
+    }
+     */
+
+// == 과 equals //reference type
+public static void main(String[] args) {
+
+
+        String text1 = "sample"; //리터럴 타입으로 생성
+        String text2 = text1;
+
+        String text3 = new String("sample"); //new 연산자를 이용한 방식
+        String text4 = new String("sample");
+
+
+        System.out.println(text1 == text2);            //true
+        System.out.println(text1.equals(text2));    //true
+        System.out.println(text3 == text4);            //false --> 주솟값 비교를 하기 때문에!!!
+        System.out.println(text3.equals(text4));    //true
     }
 }
