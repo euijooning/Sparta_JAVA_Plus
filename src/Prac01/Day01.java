@@ -112,7 +112,7 @@ public static void main(String[] args) {
      */
 
     // 연산자 실습
-
+/*
     public static void main(String[] args) {
 
 
@@ -135,6 +135,25 @@ public static void main(String[] args) {
         n1/=n1;
         System.out.println(n1);
     }
+
+ */
+//   다시 코드는 위로 가서 값을 대입해주지 않습니다.
+//자기자신을 나누는 연산하는 컴퓨터 연산을 수행
+//    public static void main(String[] args) {
+
+
+        /*
+        n1 %=n3;
+        System.out.println(n1);
+
+        // 상수& 키워드
+        final double PI = 3.14;
+        System.out.println(PI);
+//        PI = 3.14;
+//        System.out.println(PI);
+
+    }
+*/
 
 }
 
