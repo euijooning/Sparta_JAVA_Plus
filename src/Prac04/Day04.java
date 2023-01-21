@@ -23,7 +23,7 @@ public class Day04 {
     }
 
      */
-
+/*
     // while문 사용
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -47,5 +47,16 @@ public class Day04 {
 
             }
         }
+    }
+ */
+
+// [퀴즈] 1부터 10까지의 합 출력
+    public static void main(String[] args) {
+        int sum = 0;
+        for (int i = 0; i < 10; i++) { // 0부터 시작할것이므로 <10
+            sum +=(i+1); // 그래서 1부터 누적되므로 i+1로 적어준다.
+            // System.out.println(sum); => 여기다 쓰면 더하는 과정이 전부 보인다!
+        }
+        System.out.println(sum);
     }
 }
