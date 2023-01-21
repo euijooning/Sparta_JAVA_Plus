@@ -44,7 +44,7 @@ public class Day02 {
  */
 
     //실습02. 알파벳 출력하기
-
+/*
     public static void main(String[] args) {
 
 
@@ -58,5 +58,21 @@ public class Day02 {
     // 출력 예시
     String str = "안녕하세요";
         System.out.println(str.charAt(1));
+    }
+ */
+
+    // 전위 연산자와 후위 연산자
+    public static void main(String[] args) {
+
+        int a = 10;
+        int b;
+
+    b = a++;
+        System.out.println(b); //b=10
+        System.out.println("a =" + a + " b=  "+ b); //a=11, b=10
+
+    b = ++a;
+        System.out.println(b); // b=12
+        System.out.println("a =" + a + " b=  "+ b); //a=12, b=12
     }
 }
