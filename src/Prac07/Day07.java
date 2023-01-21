@@ -1,8 +1,10 @@
 package Prac07;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Day07 {
+    /*
     // 퀴즈 : 숫자 거꾸로 출력하기
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -21,6 +23,42 @@ public class Day07 {
             if (arr[i] != 0)
                 System.out.print(arr[i] + " ");
 
+        }
+    }
+     */
+
+
+    // 퀴즈02 . Updown Game
+    public static void main(String[] args) {
+
+
+        Random random = new Random();
+        // int num = (int) (Math.random() * 100);
+        int num = random.nextInt(100)+1; // 100개의 숫자를 임의로 발생시킨다.
+        Scanner scanner = new Scanner(System.in);
+
+        int count = 0; // 총 횟수가 필요하므로 초기화
+
+        while (true) { // 숫자를 맞출때까지 프로그램을 무한반복한다. 그래서 while을 true로 적었다.
+            System.out.println("숫자를 입력하세요.");
+//          cpu가 생성한 Random숫자 콘솔에서 확인(인쇄)할 수 있음.
+//          System.out.println(num);
+
+            int m = scanner.nextInt();
+
+            if (num > m) {
+                count++; // 정답을 맞출 때까지 횟수는 계속 늘어나므로!!!
+                System.out.println("up");
+            }
+            if (num < m) {
+                count++;
+                System.out.println("down");
+            }
+            if (num == m) {
+                count++;
+                System.out.println(count + " 회쨰 정답!");
+                break;
+            }
         }
     }
 }
