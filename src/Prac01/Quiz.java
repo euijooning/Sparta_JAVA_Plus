@@ -16,7 +16,7 @@ public class Quiz {
         System.out.println("세수의 합은 " + (i+j+k)+ " 입니다.");
     }
  */
-
+/*
     //    퀴즈2
 // 스캐너를 통해 가로와 세로를 입력받아 사각형의 넓이를 구해보기 (전체 주석 쳐 보기)
     public static void main(String[] args) {
@@ -29,4 +29,18 @@ public class Quiz {
 
         System.out.println("사각형의 넓이는 " + (x*y) + "입니다." );
     }
+
+ */
+// 퀴즈3
+// 스캐너로 나이를 입력받아 내년 나이를 구해보기
+public static void main(String[] args) {
+
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("나이: ");
+        int age2 = sc.nextInt();
+        System.out.println("내년에 나이는 " + (age2 + 1) + "살 입니다.");
+}
+
 }
