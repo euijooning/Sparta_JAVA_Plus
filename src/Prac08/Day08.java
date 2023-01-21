@@ -41,7 +41,7 @@ public String getTitle(String title) {
 // 값을 반환해 주므로 return이 꼭존재한다.
 
 */
-
+/*
     public static void main(String[] args) {
 
         String title = "Spirng";
@@ -58,9 +58,17 @@ public String getTitle(String title) {
         System.out.println(course.getTitle());
         System.out.println(course.getTutor());
         System.out.println(course.getDays());
-
-
-
     }
+ */
+    // 퀴즈 1: 응용과 실습 (클래스와 메소드)
+    // 1) Book 클래스를 만들고, 도서명(title)과 지은이(author), 출판사(publisher) ,가격(price) 멤버변수를 추가하세요.
+    // 2) 그리고 각 변수를 private 선언하고, Getter와 Setter를 만들어 보세요.
+    // 3) 마지막으로, 기본생성자와 title/ author/ price 입력받는 생성자 두개를 만들어 보세요.
+    // 4) 메인클래스(Prac)에서 변수선언하여 값을 넣고, 인스턴스를 만들어 보세요.
+    // setter을 이용하여 값을 넣는 문법을 구현하고 getter를 활용하여 책 한권의 정보를
+    // 출력하는 화면을 구현합니다.
+
+
+
 }
 
