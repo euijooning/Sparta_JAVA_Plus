@@ -31,6 +31,7 @@ public class Quiz {
     }
 
  */
+    /*
 // 퀴즈3
 // 스캐너로 나이를 입력받아 내년 나이를 구해보기
 public static void main(String[] args) {
@@ -42,5 +43,19 @@ public static void main(String[] args) {
         int age2 = sc.nextInt();
         System.out.println("내년에 나이는 " + (age2 + 1) + "살 입니다.");
 }
+     */
 
+// 퀴즈4
+// 두수를 입력받아 몫과 나머지 구하기
+public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println(" a를 입력하세요:");
+        int a =sc.nextInt();
+        System.out.println(" b를 입력하세요:");
+        int b = sc.nextInt();
+
+        System.out.println("a/b 의 몫은 "+(a/b)+ "입니다.");
+        System.out.println("a/b 의 나머지는 "+(a%b)+ "입니다.");
+    }
 }
