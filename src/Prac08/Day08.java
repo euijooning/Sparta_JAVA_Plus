@@ -1,5 +1,7 @@
 package Prac08;
 
+import Prac06.Tv;
+
 public class Day08 {
     /*
 개념설명
@@ -66,7 +68,7 @@ public String getTitle(String title) {
     // setter을 이용하여 값을 넣는 문법을 구현하고 getter를 활용하여 책 한권의 정보를
     // 출력하는 화면을 구현합니다.
 
-    /*
+/*
     public static void main(String[] args) {
         String title = "데미안";
         String author = "헤르만 헤세";
@@ -86,8 +88,8 @@ public String getTitle(String title) {
 
     }
 
-     */
 
+*/
     /*
 상속
 OOP(객체지향)의 4대 원칙으로는 캡슐화, 상속, 다형성, 추상화가 있습니다.
@@ -125,5 +127,52 @@ class Child extens Parent{}
 class Child2 extens Parent{}
 
      */
+/*
+    class Tv1 {
+        boolean power; //전원(on/off)
+        int channel; // 채널
+
+        void power() {
+            power = !power;
+        }
+
+        void channelUp() {
+            ++channel;
+        }
+
+        void channelDown() {
+            --channel;
+        }
+    }
+
+    // 자막 tv
+    class captionTv extends Tv1 {
+        // 추가로 필요한 멤버변수를 작성.
+        boolean caption;
+
+        // 메소드
+        void displayCaption(String text) {
+            if (caption) { // 캡션상태가 on(true)일때만 text를 보여 준다.
+                System.out.println(text);
+            }
+        }
+    }
+            public static void main(String[] args) {
+            captionTv ctv = new captionTv();
+            ctv.channel = 10;
+            ctv.channelUp();
+            System.out.println(ctv.channel);
+            ctv.displayCaption("Hello, World");
+            ctv.caption = true;
+            ctv.displayCaption("Hello, World");
+        }
+    }
+    상속의 예시인데, 에러나는 원인을 잘 모르겠어, 일단 넘어가자
+ */
 }
+
+
+
+
+
 
