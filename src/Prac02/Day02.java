@@ -1,6 +1,7 @@
 package Prac02;
 
 public class Day02 {
+/*
     public static void main(String[] args) {
 
         //묵시적 형변환
@@ -17,5 +18,16 @@ public class Day02 {
         System.out.println(5 + "/" + 3 + "=" + (double) 5 / 3.);
         System.out.println('A' + "+" + 32 + "=" + (char) ('A' + 32));
         System.out.println('a' + "-" + 32 + "=" + (char) ('a' - 32));
+    }
+ */
+
+    // 삼항 연산자
+    // 조건식 ? 참 : 거짓 ;
+    public static void main(String[] args) {
+
+
+    int c = 5;
+    String result = (c<10) ? "10보다 작다" : "10보다 크다";
+        System.out.println(result);
     }
 }
