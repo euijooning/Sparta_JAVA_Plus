@@ -66,6 +66,7 @@ public String getTitle(String title) {
     // setter을 이용하여 값을 넣는 문법을 구현하고 getter를 활용하여 책 한권의 정보를
     // 출력하는 화면을 구현합니다.
 
+    /*
     public static void main(String[] args) {
         String title = "데미안";
         String author = "헤르만 헤세";
@@ -85,5 +86,44 @@ public String getTitle(String title) {
 
     }
 
+     */
+
+    /*
+상속
+OOP(객체지향)의 4대 원칙으로는 캡슐화, 상속, 다형성, 추상화가 있습니다.
+캡슐화의 예로 접근제어자(은닉화)를 배웠고,
+다음으로는 상속에 대한 문법과 이해도를 높이고자 실습을 하는 시간을 갖도록 합니다.
+
+상속의 특징
+
+class Parent{}
+class Child extends Parent{}
+
+예)
+class Parent{
+int age;
+}
+
+class Child extends Parent{
+}
+
+클래스 | 클래스의 멤버
+Parent | age
+Child  | age, play()
+-------------------------------------------------------
+
+- 생성자와 초기화 블럭은 상속되지 않는다. 멤버만 상속된다. (정확한 설명)
+- 자손 클래스의 멤버 개수는 조상 클래스보다 항상 같거나 많다.
+- 여러클래스를 한번에 상속 받을 수 없다.
+- 아래와 같이 여러 클래스가 한 부모의 클래스를 상속받을 수 있다. (상속의 상속은 가능)
+. 단일 상속의 법칙이 있음
+. 하나의 클래스는 하나의 부모만을 상속 받을 수 있다.
+
+
+class Parent{}
+class Child extens Parent{}
+class Child2 extens Parent{}
+
+     */
 }
 
