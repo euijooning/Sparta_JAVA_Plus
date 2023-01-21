@@ -105,7 +105,7 @@ for-each문은 콜론을 기준으로 내가 담을 변수를 자료형과 함�
 
     //do-while문 : do가 먼저, while이 뒤에,
     //do가 있으므로 무조건 한 번은 실행이 된다.
-
+/*
     public static void main(String[] args) {
         int i = 0;
         int sum1 = 0;
@@ -116,5 +116,7 @@ for-each문은 콜론을 기준으로 내가 담을 변수를 자료형과 함�
        } while(i<10); // while에는 중괄호가 또 없구만... 그거 잘 보자!!!
             System.out.println(sum1);
     }
+ */
+
 
 }

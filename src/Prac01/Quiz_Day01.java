@@ -2,7 +2,7 @@ package Prac01;
 
 import java.util.Scanner;
 
-public class Quiz {
+public class Quiz_Day01 {
 // 퀴즈 1
 // 세개의 숫자를 각각 변수 선언하고 세수의 총합을 인쇄해보기
 /*
