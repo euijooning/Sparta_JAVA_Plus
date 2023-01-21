@@ -1,5 +1,7 @@
 package Prac03;
 
+import java.util.Scanner;
+
 public class Day03 {
     /*
     public static void main(String[] args) {
@@ -37,7 +39,7 @@ public class Day03 {
 
     }
 */
-
+/*
 // switch문은 구간처리가 좀 더 명확한 경우에 사용할 수 있다는 것.
     public static void main(String[] args) {
 
@@ -54,7 +56,21 @@ public class Day03 {
                 System.out.println("F등급");
         }
     }
+ */
+    public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
+        System.out.println("점수를 입력하세요: ");
+        int score = sc.nextInt();
 
-
+        if (score <= 100 && score > 90) {
+            System.out.println("A등급입니다.");
+        } else if (score <= 90 && score > 80) {
+            System.out.println("B등급입니다.");
+        } else if (score <= 80 && score > 70) {
+            System.out.println("C등급입니다.");
+        } else {
+            System.out.println("F등급입니다.");
+        }
+    }
 }
