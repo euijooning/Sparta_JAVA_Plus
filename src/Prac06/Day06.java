@@ -144,7 +144,30 @@ public class Day06 {
             }
         }
 
+        // 비밀번호 변경
+        // 이번에는 새로운 값을 넣어줘야 하니, set이 필요할거야. Card클래스에 set을 써줘라.
+        for (int i = 0; i<3; i++) {
+            System.out.println(c[i].user + "님, 기존 패스워드를 입력하세요: ");
+            int pw = sc.nextInt();
+
+            // 비밀번호 일치, 변경
+            if(pw==c[i].getPw()) {
+                System.out.println("새로운 pw를 입력하세요: ");
+                pw = sc.nextInt();
+
+                // 변경한 비밀번호가 기존 비밀번호와 동일하다면 출력될 메시지는 아래에.
+                if(pw == c[i].getPw()) {
+                    System.out.println("기존 비밀번호와 동일합니다!");
+                }
+                else {
+                    c[i].setPw(pw); // 동일하지 않은 경우, 새롭게 들어온 값으로 변경된다!
+                }
+            }
+            // 비밀번호 불일치, 변경 불가 => if문 이외의 경우이므로, else문 처리를 통해 구현.
+            else {
+                System.out.println("비밀번호가 불일치하여 변경 불가!");
+            }
+        }
     }
-
-
 }
+
