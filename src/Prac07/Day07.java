@@ -27,7 +27,7 @@ public class Day07 {
     }
      */
 
-
+/*
     // 퀴즈02 . Updown Game
     public static void main(String[] args) {
 
@@ -59,6 +59,30 @@ public class Day07 {
                 System.out.println(count + " 회쨰 정답!");
                 break;
             }
+        }
+    }
+
+ */
+// 퀴즈 03. 묵찌빠 게임
+    public static void main(String[] args) {
+
+        Random random = new Random();
+        int cpu = random.nextInt(3)+1;
+//            System.out.println("CPU: " + cpu);
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("가위(1), 바위(2), 보(3): ");
+        int user = sc.nextInt();
+
+
+
+        if(cpu == 1 && user == 2 || cpu ==2 && user ==3 || cpu ==3 && user ==1) {
+            System.out.println("이겼습니다.");
+        } else if (cpu == user) {
+            System.out.println("비겼습니다.");
+
+        }else {
+            System.out.println("졌습니다. ");
         }
     }
 }
