@@ -1,5 +1,7 @@
 package Prac05;
 
+import java.util.Scanner;
+
 public class Day05 {
     // 메서드
     /*
@@ -27,6 +29,7 @@ public class Day05 {
         printInfo();
     }
  */
+    /*
     // 파라미터 X, 반환값 X
     // 메서드니까 public을 붙였고, main문 안에서 실행할 테니 static, 반환값 없으니 void
     // 넘겨받는 파라미터도 없는데, 그 이야기는 simplePrint를 호출했을 때, 요 실행문{ }안의 코드가 출력이 된다는 뜻
@@ -62,5 +65,7 @@ public class Day05 {
         int ret1 = sum(4,9);
         System.out.println(ret1);
     }
+     */
+
 
 }
