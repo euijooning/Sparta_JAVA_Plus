@@ -20,6 +20,7 @@ package Prac09;
     전달해야하는 번거로움이 있게 된다.
     */
 
+/*
     // 오버라이딩
     class Point {
         int x;
@@ -39,8 +40,29 @@ package Prac09;
         }
 
     }
+
+ */
+// 오버라이딩 개념 체크 퀴즈!
+// 오버로딩과 오버라이딩 개념 체크 퀴즈!
+class Parent {
+    void parentMethod () {
+
+    }
+}
+
+class Child extends Parent {
+    void parentMethod() {} // 오버라이딩 : 원래 @Override 쓰여있던 걸 내가 지웠어.
+    void parentMethod(int i) {} // 오버로딩 : 파라미터를 재정의
+
+    void childMethod() {}
+    void childMethod(int i) {} // 오버로딩 : 파라미터를 재정의
+    // void childMethod() {} : 에러 남. 중복 정의 되었다.
+}
 public class Day09 {
     public static void main(String[] args) {
 
     }
+    /*
+오버라이딩이라 함은, 부모클래스에 있는 메서드를 자식클래스에서 사용할 때, 그 자식에 맞게 변경해서 사용하는 경우를 말한다.
+ */
 }
