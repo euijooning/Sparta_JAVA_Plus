@@ -89,6 +89,7 @@ for-each문은 콜론을 기준으로 내가 담을 변수를 자료형과 함�
     // for문 문법
     // for(시작조건(초기식); 반복을 계속할조건(종결식); 더하기(증감식)) {실행문}
 
+    /*
     // 문제 : for문처럼, 1에서 10까지 더하는 프로그램을 작성하시오.
     public static void main(String[] args) {
         int i = 0;
@@ -100,4 +101,20 @@ for-each문은 콜론을 기준으로 내가 담을 변수를 자료형과 함�
         }
         System.out.println(sum1);
     }
+     */
+
+    //do-while문 : do가 먼저, while이 뒤에,
+    //do가 있으므로 무조건 한 번은 실행이 된다.
+
+    public static void main(String[] args) {
+        int i = 0;
+        int sum1 = 0;
+
+       do {
+           sum1 += (i + 1);
+           i++;
+       } while(i<10); // while에는 중괄호가 또 없구만... 그거 잘 보자!!!
+            System.out.println(sum1);
+    }
+
 }
