@@ -122,5 +122,29 @@ public class Day06 {
             sc.nextLine();
             c[i] = new Card(name, pw, bal); //각각 i번째 카드에 정보 입력 후 카드 생성 가능
         }
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println(c[i].user + " 님, 결제 진행 중입니다.");
+
+            System.out.println("패스워드를 입력해주세요: ");
+            int pw = sc.nextInt();
+            // 비밀번호 일치하는 경우
+            if(pw == c[i].getPw()) {
+                if(c[i].bal<5000) {
+                    System.out.println("잔액이 부족합니다!");
+                }
+                else {
+                    c[i].bal -=5000; // c[i].bal = c[i].bal - 5000;
+                    System.out.println("결제가 완료되었습니다!");
+                }
+            }
+            // 비밀번호 불일치 하는 경우
+            else {
+                System.out.println("비밀번호가 일치하지 않습니다!");
+            }
+        }
+
     }
+
+
 }

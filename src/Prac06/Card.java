@@ -12,4 +12,8 @@ public class Card {
         this.pw = pw;
         this.bal = bal;
     }
+
+    public int getPw() {
+        return pw;
+    }
 }
