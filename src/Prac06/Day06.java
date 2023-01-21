@@ -71,6 +71,7 @@ public class Day06 {
             // 파라미터가 4개짜리인 생성자를 통해 객체 만들기
             // 메인 클래스에서 변수와 값을 선언하고 파라미터 4개를 넘겨받는 방식으로 출력해보기
 
+    /*
     public static void main(String[] args) {
 // 1-1.
             Book06 book1 = new Book06();
@@ -97,5 +98,6 @@ public class Day06 {
              System.out.println(publisher);
              System.out.println(price);
         }
+     */
 
 }
