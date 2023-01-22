@@ -47,7 +47,7 @@ class Dog10 extends Animal10 {
     }
 }
 
-public class Day10_3 {
+public class Day10_3_Animal {
     public static void main(String[] args) {
         Cat10 cat = new Cat10("고양고양이", 5);
         Dog10 dog = new Dog10("바둑이", 10);
