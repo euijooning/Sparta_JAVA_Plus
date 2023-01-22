@@ -30,8 +30,17 @@ abstract class Bird {
     public void printLocation() {
         System.out.println("현재 위치:  ("+x+", "+y+", "+z+")");
     }
-
-
 }
+
+//Bird 상속받는 Pigeon(비둘기) 클래스 구현
+class Pigeon extends Bird { //상속을 받으면 처음에 빨간줄이 뜬다. 이유는 미 구현된 무언가가 있기 때문에 반드시 구현하라는 뜻.
+
+    @Override
+    boolean flyable(int z) {
+        return z<10000;
+    }
+}
+
+
 public class Day10 {
 }
