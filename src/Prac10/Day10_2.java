@@ -2,9 +2,36 @@ package Prac10;
 
 interface Bird2 {
 
+    void fly2(int x, int y, int z);
+
+
+}
+
+class Pigeon2 implements Bird2 {
+    private int x, y, z;
+
+    @Override
+    public void fly2(int x, int y, int z) {
+        printLocation2();
+        System.out.println("지금부터 날아갑니다.");
+         this.x = x;
+         this.y = y;
+         this.z = z;
+         printLocation2();
+
+    }
+
+    public void printLocation2() {
+        System.out.println("현재 위치:  ("+x+", "+y+", "+z+")");
+
+    }
 }
 public class Day10_2 {
     public static void main(String[] args) {
+
+        //Pigeon2 pigeon2 = new Pigeon2(); 가능
+        Bird2 pigeon = new Pigeon2();
+        pigeon.fly2(1,2,3);
 
     }
 }
