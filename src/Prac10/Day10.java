@@ -41,6 +41,14 @@ class Pigeon extends Bird { //상속을 받으면 처음에 빨간줄이 뜬다.
     }
 }
 
-
+// 날 수 없는 공작새 클래스 생성
+class Peacock extends Bird {
+    @Override
+    boolean flyable(int z) {
+        return false; // 날 수 없으므로 false 반환.
+    }
+}
 public class Day10 {
+
+
 }
