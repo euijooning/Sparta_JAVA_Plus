@@ -50,6 +50,15 @@ class Peacock extends Bird {
 }
 public class Day10 {
     public static void main(String[] args) {
+
+        /*
+        cf. 첫 줄을 상속받은 자동객체로 구현하는 게 아니라, Bird pigeon = new Pigeon();으로 해도 가능하다!
+        두번째 줄도, Bird peacock = new Peacock(); 도 가능하다.
+        그 이유는 추상클래스에서 정의해 놓은 것을 자동객체에서 다 구현을 해 놓았기 때문에
+        추상클래스 타입은 부모 클래스 타입으로 객체 생성이 가능하다!
+        다형성 측면.
+         */
+
         Pigeon pigeon = new Pigeon();
         Peacock peacock = new Peacock();
 
@@ -65,6 +74,11 @@ public class Day10 {
         pigeon.fly(3,3,30000);
 
     }
-
-
 }
+/*
+정리
+: 추상클래스는 미구현된 내용을 가지고 있고, 그것을 상속받아서 사용하게 된다면, 사용할 때에 반드시 미구현된 내용은 구현해줘야 한다.
++ 구현을 할 때 부모 타입은 추상 클래스의 타입으로 쓸 수 있다.
+
+다만, 위에서 Bird 타입으로는 인스턴스를 만들 수 없다. 추상클래스는 미구현된 부분이 있어서 그 자체로는 객체를 만들 수 없기 때문.
+ */
