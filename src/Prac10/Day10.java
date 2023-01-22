@@ -49,6 +49,22 @@ class Peacock extends Bird {
     }
 }
 public class Day10 {
+    public static void main(String[] args) {
+        Pigeon pigeon = new Pigeon();
+        Peacock peacock = new Peacock();
+
+        System.out.println("====비둘기====");
+        pigeon.fly(1,1,3);
+        System.out.println();
+
+        System.out.println("====공작새====");
+        peacock.fly(1,1,3);
+        System.out.println();
+
+        System.out.println("====비둘기====");
+        pigeon.fly(3,3,30000);
+
+    }
 
 
 }
