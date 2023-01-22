@@ -151,8 +151,14 @@ class Person{
 class Student extends Person{
     String str2 = "난자식 클래스";
     // 그 내용을 덮어쓴것, 재정의해서 사용하겠다
-    void method1() {System.out.println("오버라이딩-AAA");}
-    void sss() {System.out.println("sss");}
+    void method1() { // 부모클래스에서 메서드를 받았으니까 오버라이딩이 되겠지.
+        System.out.println("오버라이딩-AAA");
+    }
+
+    //독자적 메서드
+    void sss() {
+        System.out.println("sss");
+    }
 
     // 마지막
     void x(){
@@ -164,15 +170,19 @@ public class Day09 {
     public static void main(String[] args) {
 
         Student s1 = new Student();
-        System.out.println(s1.str1);
-        System.out.println(s1.str2);
-        s1.method1();
-        s1.sss();
+        System.out.println(s1.str1); //부모 타입으로 선언한 멤버변수
+        System.out.println(s1.str2); // 자식 자기자신이 선언한 멤버변수
+        s1.method1(); // 똑같이 오버라이딩된 메서드를 불러왔을 때에는 자식에서 재정의된 메서드를 불러오게 된다.
+        s1.sss(); // 독자적으로 정의된 자기 클래스의 메서드를 사용할 수도 있다. 이렇게.
         // 자식클래스에 있는 모든 자원 사용이 가능하다.
         // 부모클래스에 있는 모든 자원 사용이 가능하다.
-        s1.ppp();
-        // 여기서 질문! 자식클래스에서 오버라이딩 된 브모클래스의 원본 메서드를 호출하고 싶다면? > 슈퍼
-// d위의 void x 클래스 에서의 method1에 슈퍼를 붙이면 된다.
+        s1.ppp(); // 여기서 그럼 부모 타입의 메서드를 쓸 수 있냐 없냐? : 자식은 물려받았기 때문에 부모 것을 다 쓸 수 있다.
+
+        //클래스명.부모클래스타입 도 자식은 가져다 쓸 수 있다.
+
+
+        // 여기서 질문! 자식클래스에서 오버라이딩 된 부모클래스의 원본 메서드를 호출하고 싶다면?(AAA가 아니라 에이에이에이) > 슈퍼
+        // d위의 void x 클래스 에서의 method1에 슈퍼를 붙이면 된다.
         s1.x();
 
 
@@ -180,9 +190,9 @@ public class Day09 {
 // 정상, 하위 클래스로 객체를 만들면서 타입은 부모타입을 쓰는것이 가능(다형성) , 부모의 자원만 쓸수 있다(?)
         Person s2 = new Student();
         System.out.println(s2.str1);
-//        System.out.println(s2.str2); //err
+//        System.out.println(s2.str2); //err : 우리가 객체생성을 할 때 부모 타입으로 만들었기 때문에 자식의 것은 가져다 쓸 수 없다.
         s2.ppp();
-//        s2.sss(); // 자식의 자원을 쓸수 없다.
+//        s2.sss(); err : // 자식의 자원을 쓸수 없다.
         s2.method1(); // 오버라이딩 - AAA --> 오버라이딩한거는 자식의 메서드로 실행.
 
         // 부모클래스에 없는 자식의 메서드를 바로 호출하고 싶다면? --> 캐스트 필요

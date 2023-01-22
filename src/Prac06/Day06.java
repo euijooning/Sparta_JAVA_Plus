@@ -1,6 +1,5 @@
 package Prac06;
 
-import java.awt.print.Book;
 import java.util.Scanner;
 
 public class Day06 {
