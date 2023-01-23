@@ -1,6 +1,7 @@
 package Prac10;
 
 public class Taxi10 implements Meter10 {
+    //Meter10 인터페이스의 start와 stop 메서드를 구현해야 한다.
 
     @Override
     public void start() {
@@ -10,7 +11,7 @@ public class Taxi10 implements Meter10 {
 
     @Override
     public int stop(int distance) {
-        int fare = BASE_FARE + distance * 2; //요금 책정하는 방식
+        int fare = BASE_FARE + distance * 2; //요금 책정하는 방식. 즉 운행이 종료되면 요금을 알 수 있도록 로직을 작성한다.
         System.out.println("운행을 종료합니다. 요금은 " + fare + "원 입니다.");
         return fare;
     }
