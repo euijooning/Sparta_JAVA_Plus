@@ -37,3 +37,4 @@ public class InterTest11 {
         factoryCam.report();
     }
 }
+//다시 FactoryCam 쪽으로 가보면...

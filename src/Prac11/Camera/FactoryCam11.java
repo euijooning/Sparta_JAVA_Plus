@@ -18,7 +18,15 @@ public class FactoryCam11 extends Camera11 implements Detectable, Reportable { /
     public void setReporter(Reportable reporter) {
         this.reporter = reporter;
     }
+/*
+여기에서는 인스턴스 변수로 두개의 인터페이스를 정의하는 식으로 구현하는 걸로 변수를 정의를 했고,
+ setter를 통해서 외부에서 보내주는 파라미터로 Detectable 타입이나 Reportable 타입에 적용함으로써
+ 화재를 감지하거나 신고할 때, 우리가 조금 전에 전달받은 detector나 reporter를 통해 할 수 있다는 것을 깨달았다.
 
+ 따라서 이후에 더 좋은 성능을 가진 것들이 나오면, 해당 기능을 갈아끼우는 걸로 갈아끼우기만 하면!
+ 보다 더 좋은 것으로 감지를 하거나 신고를 하는 것이 가능하게 된다.
+ 이러한 기능들은 다른 카메라에서 활용할 수 있도록 설정만 하면 다른 카메라에서 이용할 수도 있다.
+ */
 
     @Override
     public void showMainFeature() { // 주요특징
