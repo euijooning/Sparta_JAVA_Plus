@@ -1,5 +1,6 @@
 package Prac12;
 
+import Prac12.coffee12.Coffee12;
 import Prac12.coffee12.CoffeeByName12;
 import Prac12.coffee12.CoffeeByNickName12;
 import Prac12.coffee12.CoffeeByNumber12;
@@ -38,6 +39,29 @@ public class _02_GenericsClass {
 
         String c4Name = (String)c4.name;
         System.out.println("주문 고객 변호: " + c4Name); // 반드시 형변환 해서 가져와야함. Object이므로
+
+        // c3에 c4를 가져온다거나, 이렇게 잘못 가져온 경우가 있을 수 있지
+        // c4Name = (String)c3.name
+
+        // Objcet
+        System.out.println("-------");
+
+        Coffee12<Integer> c5 = new Coffee12<>(35);
+        c5.ready();
+        //만약 우리가 c5의 name을 얻어온다고 가정하면!
+        int c5Name = c5.name; // 에러 안 난다. 당연히 정수데이터를 넣기로 했기 때문에 형변환도 필요가 없어.
+        System.out.println("주문 고객 번호: " + c5Name);
+
+        Coffee12<String> c6 = new Coffee12<>("강동원");
+        c6.ready();
+        //여기도 마찬가지!
+        String c6Name = c6.name;
+        System.out.println("주문 고객 이름: " + c6Name);
+
+
+        // 우리가 앞에서 있었던 문제가 c4 name을 c3으로 형변환 하면서 애러가 있었지, 만약에 35를 정우성으로 바꾸면 바로 에러 난다.
+        // 숫자만 넣기를 기대했기 때문에, 물론 강동원을 35로 바꿔도 마찬가지
+
 
 
 
