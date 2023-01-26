@@ -1,9 +1,8 @@
 package Prac12;
 
-import Prac12.coffee12.Coffee12;
-import Prac12.coffee12.CoffeeByName12;
-import Prac12.coffee12.CoffeeByNickName12;
-import Prac12.coffee12.CoffeeByNumber12;
+import Prac12.coffee12.*;
+import Prac12.user12.User12;
+import Prac12.user12.VipUser12;
 
 public class _02_GenericsClass {
     public static void main(String[] args) {
@@ -62,8 +61,18 @@ public class _02_GenericsClass {
         // 우리가 앞에서 있었던 문제가 c4 name을 c3으로 형변환 하면서 애러가 있었지, 만약에 35를 정우성으로 바꾸면 바로 에러 난다.
         // 숫자만 넣기를 기대했기 때문에, 물론 강동원을 35로 바꿔도 마찬가지
 
+        /*
+        이제 회원가입을 추가해서 관리했다고 가정하자. 휴대폰 번호 등을 이용해 포인트 적립 등으로 혜택
+         */
 
+        // 이제 사용자들이 주문하는 상황을 가정해봅시다 (CoffeeByUser12)
 
+        CoffeeByUser12<User12> c7 = new CoffeeByUser12<>(new User12("이동욱"));//괄호 안에 객체가 들어가야 함. User의 객체. 형태는 문자열이 들어가야
+        c7.ready();
+
+        CoffeeByUser12<VipUser12> c8 = new CoffeeByUser12<>(new VipUser12("정우성"));
+        c8.ready();
+        //CoffeeByUser12<VipUser12> c8 = new CoffeeByUser12<>(new Camera11("정우성")); 이건 애러. 받는 것 제한
 
     }
 }
