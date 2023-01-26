@@ -1,5 +1,6 @@
 package Prac12;
 
+import Prac12.coffee12.CoffeeByName12;
 import Prac12.coffee12.CoffeeByNickName12;
 import Prac12.coffee12.CoffeeByNumber12;
 
@@ -23,5 +24,13 @@ public class _02_GenericsClass {
         방법: 1 Object클래스 사용
         모든 클래스의 조상이기 때문에 따로 상속을 해주지 않아도, 모든 클래스에서는 object 타입을 받을 수가 있다.
          */
+
+        CoffeeByName12 c3 = new CoffeeByName12(34); // Object로 받았으므로 아무 문제가 없어요. 정수
+        c3.ready();
+        CoffeeByName12 c4 = new CoffeeByName12("조미연"); // 문자열
+        c4.ready();
+        System.out.println("------------------");
+
+
     }
 }
