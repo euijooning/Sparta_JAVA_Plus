@@ -31,6 +31,15 @@ public class _02_GenericsClass {
         c4.ready();
         System.out.println("------------------");
 
+        // 이제 CoffeeByName12에서 name을 가져와서 이름과 주문번호를 확인하고 싶어요.
+
+        int c3Name = (int)c3.name;
+        System.out.println("주문 고객 변호: " + c3Name); // 반드시 형변환 해서 가져와야함.
+
+        String c4Name = (String)c4.name;
+        System.out.println("주문 고객 변호: " + c4Name); // 반드시 형변환 해서 가져와야함. Object이므로
+
+
 
     }
 }
