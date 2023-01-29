@@ -9,6 +9,8 @@ public class User12 {
         this.name = name;
     }
     public void addPoint() {
+
+        // 포인트 적립 메소드
         System.out.println(this.name + " 님, 포인트가 적립 되었습니다!");
     }
 }
