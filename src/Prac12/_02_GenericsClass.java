@@ -84,5 +84,20 @@ public class _02_GenericsClass {
         c8.ready();
         //CoffeeByUser12<VipUser12> c8 = new CoffeeByUser12<>(new Camera11("정우성")); 이건 애러. 받는 것 제한
 
+        // 지금까지는 T 값 하나만 전달받아서 했는데, 하나 말고 더 할 수도 있다.
+        System.out.println("---------------");
+        orderCoffee("유재석");
+        orderCoffee(36);
+
+        System.out.println("--------------");
+        orderCoffee(37, "라테");
+    }
+    public static <T> void orderCoffee(T name) {
+        System.out.println("커피 준비 완료 " +name);
+
+    }
+    public static <T, V> void orderCoffee(T name, V coffee) {
+        System.out.println(coffee+ " 준비 완료 " + name);
+
     }
 }
