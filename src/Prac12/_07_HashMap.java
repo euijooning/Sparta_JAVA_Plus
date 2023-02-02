@@ -1,12 +1,13 @@
 package Prac12;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class _07_HashMap {
     public static void main(String[] args) {
         // 설명 보충 필요 다시 듣고 정리
 
-        HashMap<String, Integer> map = new HashMap<>();
+        HashMap<String, Integer> map = new LinkedHashMap<>();
         // Key는 자료형, Value값은 숫자기 때문에 Integer
 
         // 데이터 추가 이거는 add가 아니라 put
