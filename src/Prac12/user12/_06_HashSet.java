@@ -1,6 +1,7 @@
 package Prac12.user12;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 
 public class _06_HashSet {
     public static void main(String[] args) {
@@ -47,7 +48,7 @@ public class _06_HashSet {
         System.out.println("----------");
 
         //Set의 특징 : 중복x, 순서 보장x
-        HashSet<Integer> intSet = new HashSet<>();
+        HashSet<Integer> intSet = new LinkedHashSet<>(); // 순서 보장하기 위해
         intSet.add(1);
         intSet.add(13);
         intSet.add(2);
