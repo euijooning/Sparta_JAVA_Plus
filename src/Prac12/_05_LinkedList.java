@@ -115,6 +115,8 @@ public class _05_LinkedList {
         for(String s : list) {
             System.out.println(s);
         }
+
+        // 링크드리스트는 중복 데이터 허용한다.
     }
 }
 
