@@ -81,6 +81,15 @@ public class _05_LinkedList {
         list.set(0, "이수근"); //김영철->이수근
         System.out.println(list.get(0));
 
+        // 데이터 확인
+        System.out.println(list.indexOf("김종국"));
+        if(list.contains("김종국")) {
+            System.out.println("수강 신청 성공");
+        } else {
+            System.out.println("수강 신청 실패");
+        }
+        System.out.println("----------------");
+
     }
 }
 
