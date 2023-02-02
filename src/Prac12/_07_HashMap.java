@@ -13,6 +13,8 @@ public class _07_HashMap {
         map.put("유재석", 10);
         map.put("박명수", 5);
         map.put("김종국", 3);
+        //서장훈 있었다면?
+        map.put("서장훈", 1);
 
         System.out.println("총 고객 수 : " + map.size());
         System.out.println("---------------");
@@ -30,6 +32,7 @@ public class _07_HashMap {
         } else { // 서장훈이 리스트에 없는 경우
             map.put("서장훈", 1);
             System.out.println("서장훈님 (포인트 1점)");
+        // 있으면 11점 출력
 
 
         }
