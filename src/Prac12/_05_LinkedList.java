@@ -1,5 +1,6 @@
 package Prac12;
 
+import java.util.Collections;
 import java.util.LinkedList;
 
 public class _05_LinkedList {
@@ -90,6 +91,30 @@ public class _05_LinkedList {
         }
         System.out.println("----------------");
 
+        // 전체삭제 : 내장함수 clear
+        list.clear();
+        if(list.isEmpty()) {
+            System.out.println("학생 수: " + list.size());
+            System.out.println("리스트가 비어있습니다.");
+        }
+        System.out.println("---------------------");
+
+        // 정렬
+
+        // 다시 다섯 명 추가
+        list.add("유재석");
+        list.add("조세호");
+        list.add("김종국");
+        list.add("박명수");
+        list.add("강호동");
+
+        // 출석부 일단 만들기
+        Collections.sort(list); // 데이터를 가나다순으로 정렬
+
+        // 잘 되었는지 for-each문으로 순회
+        for(String s : list) {
+            System.out.println(s);
+        }
     }
 }
 
