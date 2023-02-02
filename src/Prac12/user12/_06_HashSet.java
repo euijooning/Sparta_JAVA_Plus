@@ -26,6 +26,25 @@ public class _06_HashSet {
         }
         System.out.println("-----------");
 
+        // 데이터 확인
+        if(set.contains("삼겹살")) {
+            System.out.println("삼겹살 사러 출발");
+        }
+
+        System.out.println("---------");
+
+        // 삭제
+        System.out.println("총 구매 상품 수(삼겹살 사기 전) :" + set.size());
+        set.remove("삼겹살");
+        System.out.println("총 구매 상품 수(삼겹살 산 후) :" + set.size());
+
+        // 전체삭제
+        set.clear();
+        if(set.isEmpty()) {
+            System.out.println("남은 상품의 수: " + set.size()); //0 출력
+            System.out.println("집으로 출발!");
+        }
+        System.out.println("----------");
 
 
     }
