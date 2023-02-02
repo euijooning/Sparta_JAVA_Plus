@@ -57,6 +57,25 @@ public class _05_LinkedList {
         System.out.println("학생 추가 후: " + list.get(2)); // 유재석 출력 <== 이동한 위치
 
         //Day14
+
+        // 삭제
+        System.out.println("남은 학생 수(제외 전) : " + list.size());
+        list.remove(list.size()-1); // 마지막 데이터 삭제
+        System.out.println("남은 학생 수(제외 후) : " + list.size());
+
+        System.out.println("-------------");
+
+        // 처음 학생과 마지막 학생이 전학갔다.
+        System.out.println("남은 학생 수(전학 전) : " + list.size());
+        list.removeFirst(); // 첫 데이터가 삭제
+        list.removeLast(); // 마지막 데이터가 삭제
+        System.out.println("남은 학생 수(전학 후) : " + list.size());
+
+        for(String s : list) {
+            System.out.println(s);
+        }
+
+
     }
 }
 
