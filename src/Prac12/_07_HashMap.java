@@ -46,5 +46,39 @@ public class _07_HashMap {
         }
         System.out.println("------------");
 
+        // 다음날 다시 찾아왔어
+        map.put("유재석", 10);
+        map.put("박명수", 5);
+        map.put("김종국", 3);
+        map.put("서장훈", 1);
+
+        // key 확인
+        for (String key: map.keySet()) {
+            System.out.println(key);
+        }
+        System.out.println("------------");
+
+        //value 확인
+        for(int value : map.values()) {
+            System.out.println(value);
+        }
+        System.out.println("------------");
+
+        // Key와 value 함께 확인
+        for(String key: map.keySet()) {
+            System.out.println("고객이름: " + key + "\t포인트" + map.get(key));
+        }
+        System.out.println("---------------");
+
+        // map:순서 x, 중복 x
+        map.put("김종국", 11);
+        map.put("김종국", 30);
+        map.put("김종국", 50);
+
+        for(String key: map.keySet()) {
+            System.out.println("고객이름: " + key + "\t포인트" + map.get(key));
+        }
+        System.out.println("---------------");
+
     }
 }
