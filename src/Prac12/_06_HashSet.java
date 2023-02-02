@@ -1,4 +1,4 @@
-package Prac12.user12;
+package Prac12;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
