@@ -55,6 +55,8 @@ public class _05_LinkedList {
 
         // 진짜 추가되었는지 확인해보기
         System.out.println("학생 추가 후: " + list.get(2)); // 유재석 출력 <== 이동한 위치
+
+        //Day14
     }
 }
 
