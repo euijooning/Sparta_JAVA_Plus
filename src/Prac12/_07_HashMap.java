@@ -32,9 +32,19 @@ public class _07_HashMap {
         } else { // 서장훈이 리스트에 없는 경우
             map.put("서장훈", 1);
             System.out.println("서장훈님 (포인트 1점)");
-        // 있으면 11점 출력
-
-
+            // 있으면 11점 출력
         }
+        map.remove("유재석");
+        System.out.println(map.get("유재석"));
+        System.out.println("-----------");
+
+        //전체삭제
+        map.clear();
+        if (map.isEmpty()) {
+            System.out.println("남은 고객 수: " + map.size());
+            System.out.println("가게를 접어야겠다");
+        }
+        System.out.println("------------");
+
     }
 }
