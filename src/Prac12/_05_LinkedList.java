@@ -75,6 +75,11 @@ public class _05_LinkedList {
             System.out.println(s);
         }
 
+        System.out.println("---------------");
+        // 변경
+        //ListSet 함수로
+        list.set(0, "이수근"); //김영철->이수근
+        System.out.println(list.get(0));
 
     }
 }
