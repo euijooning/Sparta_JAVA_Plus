@@ -46,6 +46,14 @@ public class _06_HashSet {
         }
         System.out.println("----------");
 
+        //Set의 특징 : 중복x, 순서 보장x
+        HashSet<Integer> intSet = new HashSet<>();
+        intSet.add(1);
+        intSet.add(13);
+        intSet.add(2);
 
+        for(int i : intSet) {
+            System.out.println(i);
+        }
     }
 }
