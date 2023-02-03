@@ -58,8 +58,8 @@ public class _05_LinkedList {
         System.out.println("학생 추가 후: " + list.get(2)); // 유재석 출력 <== 이동한 위치
 
         //Day14
-
-        // 삭제
+        System.out.println("----------------");
+        // 삭제 : list.remove()
         System.out.println("남은 학생 수(제외 전) : " + list.size());
         list.remove(list.size()-1); // 마지막 데이터 삭제
         System.out.println("남은 학생 수(제외 후) : " + list.size());
@@ -77,12 +77,13 @@ public class _05_LinkedList {
         }
 
         System.out.println("---------------");
-        // 변경
+
+        // 변경 : list.set(변경위치, 변경값)
         //ListSet 함수로
         list.set(0, "이수근"); //김영철->이수근
-        System.out.println(list.get(0));
+        System.out.println(list.get(0)); // 첫번째에 이수근 출력
 
-        // 데이터 확인
+        // 데이터 확인 list.contains()
         System.out.println(list.indexOf("김종국"));
         if(list.contains("김종국")) {
             System.out.println("수강 신청 성공");
@@ -93,6 +94,8 @@ public class _05_LinkedList {
 
         // 전체삭제 : 내장함수 clear
         list.clear();
+
+        //isEmpty() 진짜 비어있는지 확인
         if(list.isEmpty()) {
             System.out.println("학생 수: " + list.size());
             System.out.println("리스트가 비어있습니다.");
@@ -107,16 +110,21 @@ public class _05_LinkedList {
         list.add("김종국");
         list.add("박명수");
         list.add("강호동");
+        // 강호동 중복추가
+        list.add("강호동");
+        list.add("강호동");
+        list.add("강호동");
 
         // 출석부 일단 만들기
-        Collections.sort(list); // 데이터를 가나다순으로 정렬
+        Collections.sort(list); // 정렬할 것의 이름을 넣어주기만 하면, 데이터를 가나다순으로 정렬
 
-        // 잘 되었는지 for-each문으로 순회
+        // 정렬이 잘 되었는지 for-each문으로 순회
         for(String s : list) {
             System.out.println(s);
         }
 
         // 링크드리스트는 중복 데이터 허용한다.
+        // 강호동씨를 여러번 넣어볼게요. 여러번 넣어진다.
     }
 }
 
