@@ -41,6 +41,8 @@ public class _06_HashSet {
 
         // 전체삭제
         set.clear();
+
+        //비어있는지 확인
         if(set.isEmpty()) {
             System.out.println("남은 상품의 수: " + set.size()); //0 출력
             System.out.println("집으로 출발!");
