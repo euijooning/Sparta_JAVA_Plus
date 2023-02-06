@@ -1,8 +1,12 @@
 package Prac12;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.SortedMap;
 
 public class _08_Iterator {
     public static void main(String[] args) {
@@ -57,8 +61,54 @@ public class _08_Iterator {
             System.out.println(it.next()); // 반복을 도는 동안 그 다음값들을 계속 찍어줘. 다음 값이 없으면 탈출.
         }
         System.out.println("------------");
-    }
+
     // 지우는 것부터 다음 시간에!
 
     //Day15 시작
+    //커서 다시 처음으로 이동
+        it = list.iterator();
+        while (it.hasNext()) {
+            String s = it.next();
+            if(s.contains("(알 수 없음)")) {
+                it.remove(); // 삭제
+            }
+        }
+
+        System.out.println("-----------");
+
+        it = list.iterator();
+        while (it.hasNext()) {
+            System.out.println((it.next()));
+        }
+        System.out.println("----------");
+
+        HashSet<String> set = new HashSet<>();
+        set.add("유재석");
+        set.add("박명수");
+
+        Iterator<String> itSet = set.iterator();
+        while (itSet.hasNext()) {
+            System.out.println(itSet.next());
+        }
+        System.out.println("-------------------");
+
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("유재석", 10);
+        map.put("박명수", 5);
+
+        //map.iterator(); 내장함수로 제공되지 않음.
+        // 그럼 어떤식으로 불러와야할까. map.keuSet() 이용
+        //map.keySet().iterator();
+        Iterator<Integer> itMapValue = map.values().iterator();
+        while (itMapValue.hasNext()) {
+            System.out.println(itMapValue.next());
+        }
+        System.out.println("-------------------");
+
+        Iterator<Map .Entry<String, Integer>> itMap = map.entrySet().iterator();
+        while (itMap.hasNext()) {
+            System.out.println(itMap.next());
+        }
+        System.out.println("---------------------");
+    }
 }
