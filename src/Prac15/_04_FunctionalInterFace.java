@@ -17,6 +17,15 @@ public class _04_FunctionalInterFace {
     ConvertibleWithNoParams c1 = () -> System.out.println("1 달러 = 1200 원");
     c1.convert();
 
+    // 2. 두 줄 이상 코드가 있는 경우
+    // 그냥 새로운 인터페이스 안 만들고 c1 끌어다가 쓰심.
+    c1 = () -> {
+      int USD = 5;
+      int KRW = 1200;
+      System.out.println(USD + " 달러 = " + (USD * KRW) + " 원");
+    };
+    c1.convert(); //5 달러 = 6000 원 출력
+
 
 
     //----------------------- 앞 내용은 뒤로 미뤄두고, 다른 것 실습!
