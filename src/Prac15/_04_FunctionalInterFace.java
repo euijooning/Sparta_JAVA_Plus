@@ -30,7 +30,13 @@ public class _04_FunctionalInterFace {
     ConvertibleWithTwoParams c2 = (USD, KRW) -> System.out.println(USD + " 달러 = " + (USD * KRW) + " 원");
     c2.convert(10, 1200);
 
-
+    // 4. 반환값이 있는 경우
+    ConvertibleWithReturn c3 = (USD, KRW) ->  USD * KRW;
+    //c3.convert(20, 1200);
+    // 그런데 이건 원래 반환값이 있는 거였잖아. 여기서 convert에 대고 ctrl + alt + v 하면 리턴 타입형 자동 삽입됨.
+    int result = c3.convert(20, 1200); // 헷갈릴 수 있어서 저장 변수명 result로 변경했음.
+    // 확인하기 위해서
+    System.out.println("20 달러 = " + result + " 원");
 
     //----------------------- 앞 내용은 뒤로 미뤄두고, 다른 것 실습!
     //converter.convert(1); // 1 달러 = 1200 원 출력
