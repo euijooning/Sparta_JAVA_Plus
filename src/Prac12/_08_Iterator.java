@@ -6,7 +6,6 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.SortedMap;
 
 public class _08_Iterator {
     public static void main(String[] args) {
@@ -56,7 +55,7 @@ public class _08_Iterator {
 
         System.out.println("---------");
 
-        it = list.listIterator(); // 커서 위치를 다시 처음으로 이동
+        it = list.listIterator(); // 커서 위치를 다시 처음으로 이동 객체를 처음 것을 불러오면 됨.
         while ((it.hasNext())) {
             System.out.println(it.next()); // 반복을 도는 동안 그 다음값들을 계속 찍어줘. 다음 값이 없으면 탈출.
         }
@@ -67,44 +66,67 @@ public class _08_Iterator {
     //Day15 시작
     //커서 다시 처음으로 이동
         it = list.iterator();
+
+
         while (it.hasNext()) {
-            String s = it.next();
-            if(s.contains("(알 수 없음)")) {
+
+            // 먼저 데이터를 가지고 와서 우리가 삭제할 데이터인지를 확인해보자.
+            String s = it.next(); // 현재 커서가 있는 위치에서부터 그 다음 데이터들을 차례로 찍어줌
+            if(s.contains("(알 수 없음)")) { // 알 수 없음일 때,
                 it.remove(); // 삭제
             }
         }
 
         System.out.println("-----------");
 
+        //잘 삭제 되었는지 확인하기
         it = list.iterator();
         while (it.hasNext()) {
-            System.out.println((it.next()));
+            System.out.println((it.next())); // 알 수 없음이 빠진 데이터들이 출력되겠지.
         }
         System.out.println("----------");
 
+        //-------------------------------------
+        //이터레이터를 맵이나 Set에서도 쓸 수 있다
+        // 먼저 HashSet을 보자.
         HashSet<String> set = new HashSet<>();
         set.add("유재석");
         set.add("박명수");
 
-        Iterator<String> itSet = set.iterator();
+        //set.iterator()을 쓴 다음에, ctrl + alt + v 하면 자동으로 객체가 생성된다!
+        // 편리한 기능이니까 참고하도록.
+        Iterator<String> itSet = set.iterator(); // Set에서 포함된 데이터를 찍어보는 부분을 만들기
         while (itSet.hasNext()) {
-            System.out.println(itSet.next());
+            System.out.println(itSet.next()); // 근데 순서는 보장이 안 되기 때문에 어떤 식으로 나올지는 모른다.
         }
         System.out.println("-------------------");
 
-        HashMap<String, Integer> map = new HashMap<>();
+        // HashMap에서 써보기.
+        HashMap<String, Integer> map = new HashMap<>(); // 객체 생성
         map.put("유재석", 10);
         map.put("박명수", 5);
 
         //map.iterator(); 내장함수로 제공되지 않음.
-        // 그럼 어떤식으로 불러와야할까. map.keuSet() 이용
-        //map.keySet().iterator();
+        //그럼 어떤식으로 불러와야할까. map.keuSet() 이용
+        // key와 value를 이터레이터 통해 순회 하면 됨
+        //map.keySet().iterator(); // 역시 ctrl + alt + v를 통해 객체를 생성
+        // map.keySet().iterator();
+        Iterator<String> itMapKey = map.keySet().iterator();
+        while (itMapKey.hasNext()) {
+            System.out.println(itMapKey.next());
+        }
+        System.out.println("---------");
+
+        // 이제는 value.
+        //map.values().iterator();
         Iterator<Integer> itMapValue = map.values().iterator();
         while (itMapValue.hasNext()) {
-            System.out.println(itMapValue.next());
+            System.out.println(itMapValue.next()); // 순서를 보장하지 않기 때문에
         }
         System.out.println("-------------------");
 
+        //Key와 value를 한꺼번에 출력
+        // map.entrySet().iterator();
         Iterator<Map .Entry<String, Integer>> itMap = map.entrySet().iterator();
         while (itMap.hasNext()) {
             System.out.println(itMap.next());
