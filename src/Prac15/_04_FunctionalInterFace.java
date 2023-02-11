@@ -12,6 +12,14 @@ public class _04_FunctionalInterFace {
   public static void main(String[] args) {
     // KRWConverter 객체 만들어서 실행해보기
     KRWConverter16 converter = new KRWConverter16();
+
+    // 1. 전달값이 하나도 없는 경우
+    ConvertibleWithNoParams c1 = () -> System.out.println("1 달러 = 1200 원");
+    c1.convert();
+
+
+
+    //----------------------- 앞 내용은 뒤로 미뤄두고, 다른 것 실습!
     //converter.convert(1); // 1 달러 = 1200 원 출력
 
     // convertUSD(converter, 2); // 2 달러 = 2400 원 출력.
