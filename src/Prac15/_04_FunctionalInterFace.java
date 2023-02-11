@@ -38,6 +38,11 @@ public class _04_FunctionalInterFace {
   // 인터페이스의 객체로 만드는 일을 해보려고 합니다.
   Convertible16 convertible = (USD) -> System.out.println(USD + " 달러 = " + (USD * 1200) + " 원");
   convertUSD(convertible, 2); // 함수형 인터페이스
+
+  보통의 프로그래밍 언어에서는
+  메서드는 클래스 내부에서 어떤 일(기능)을 하는 것, 함수는 클래스 밖에서 어떤 정의한 것인데,
+  자바는 객체지향 언어라서 모든 기능을 클래스 내에서만 정의할 수 있기 때문에 메서드라고 부르는 것 뿐
+
    */
 
 
