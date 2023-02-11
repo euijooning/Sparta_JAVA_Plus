@@ -30,9 +30,15 @@ public class _04_FunctionalInterFace {
     5. 한 줄로 올린다. 그러면 한 줄일 때는 중괄호 삭제
     6. 세미콜론 삭제
      */
-    convertUSD((USD) -> System.out.println(USD + " 달러 = " + (USD * 1200) + " 원") ,2);
+   // convertUSD((USD) -> System.out.println(USD + " 달러 = " + (USD * 1200) + " 원") ,1);
   } // 실행하면 2 달러 = 2400 원 출력됨.
 
+  /*
+  // 이제 제가(튜터님)요. (USD) -> System.out.println(USD + " 달러 = " + (USD * 1200) + " 원")만 따로 떼서
+  // 인터페이스의 객체로 만드는 일을 해보려고 합니다.
+  Convertible16 convertible = (USD) -> System.out.println(USD + " 달러 = " + (USD * 1200) + " 원");
+  convertUSD(convertible, 2); // 함수형 인터페이스
+   */
 
 
     /*
@@ -63,6 +69,8 @@ public class _04_FunctionalInterFace {
      이 코드는 인터페이스의 어떤 코드와 완벽하게 매칭된다는 뜻이지.
      따라서 우리는 지금 메서드를 변수처럼 쓰면서 호출하고 있다고 볼 수 있는 것이다.
       */
+
+
 
   // 아래에 메서드 분리해서 converter.convert()가 하는 내용을 출력해보자
 
