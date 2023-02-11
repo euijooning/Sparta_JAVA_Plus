@@ -26,6 +26,10 @@ public class _04_FunctionalInterFace {
     };
     c1.convert(); //5 달러 = 6000 원 출력
 
+    // 3. 전달값이 2개인 경우
+    ConvertibleWithTwoParams c2 = (USD, KRW) -> System.out.println(USD + " 달러 = " + (USD * KRW) + " 원");
+    c2.convert(10, 1200);
+
 
 
     //----------------------- 앞 내용은 뒤로 미뤄두고, 다른 것 실습!
