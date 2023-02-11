@@ -18,6 +18,15 @@ public class _04_FunctionalInterFace {
     /*
     첫 번째와 똑같은 결과가 나왔는데, 왜 그럴까?
     => 너무 당연하다. 우리는 converter.convert(1);에서 하는 동작을 아래의 convertUSD() 메서드로 옮긴 것일 뿐이다.
+
+    그런데 코드를 잘 뜯어보면,
+    convertUSD() 메소드를 호출하면, converter를 전달을 하는데, 아래에 있는 메서드 내에서 동작은,
+    converter 내의 convert 메서드를 호출하는 것일 뿐.
+    그래서 이 동작하는 convert(2) 부분은,
+    우리가 Convertible16 인터페이스를 통해 구현한 KWRConverter의 convert(1) 메서드를 호출하는 것과 똑같다.
+    (괄호안은 헷갈리지 말라고 위해 일부러 전달값을 넣어놓은 것임)
+
+
      */
 
   }
