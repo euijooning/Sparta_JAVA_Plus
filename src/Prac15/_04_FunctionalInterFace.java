@@ -50,10 +50,20 @@ public class _04_FunctionalInterFace {
     자 그래서요. convertUSD(converter, 2); 에서 converter 부분을 삭제를 하고,
     지금 converter 부분은 KRWConverter 클래스에 있는 메서드와 완전히 동일한 기능을 수행하고 있으니 가져와서 붙여넣어 볼게요.
     그리고 람다식 이용해서 코드를 단순화시켜 보죠.
-
      */
 
-  }
+     /*
+     <또 추가 2>
+     자 그런데, 지금 우리가 하고 있는 것이 무엇이냐면, convertUSD() 를 호출하는 것은 똑같다.
+     여기서 우리는 전달값을 두 개를 주고 있지. 하나는 converter, 다른 하나는 USD
+     지금 convertUSD((USD) -> System.out.println(USD + " 달러 = " + (USD * 1200) + " 원") ,2);을 다시 보면
+     USD는 정의가 되어 있다(값: 2). 그러면 converter는?
+     (USD) -> System.out.println(USD + " 달러 = " + (USD * 1200) + " 원") 이 긴~ 걸로 대체되었음을 알 수 있음.
+     즉, 아래 메서드 내려가서 비교해보면 Convertible16 인터페이스가 이 람다식으로 구현이 되어 있는 꼴
+     이 코드는 인터페이스의 어떤 코드와 완벽하게 매칭된다는 뜻이지.
+     따라서 우리는 지금 메서드를 변수처럼 쓰면서 호출하고 있다고 볼 수 있는 것이다.
+      */
+
   // 아래에 메서드 분리해서 converter.convert()가 하는 내용을 출력해보자
 
   // 우리가 지금 환율을 변환하는 메서드를 만드는 것이므로,
