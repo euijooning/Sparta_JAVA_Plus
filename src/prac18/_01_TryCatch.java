@@ -21,7 +21,13 @@ public class _01_TryCatch {
     s.methodA(); //NullPointException
      */
 
-
+    // 예외처리 문법
+    try {
+      System.out.println(3/0);
+    } catch (Exception e) {
+      System.out.println("이런 문제가 발생했어요 => " + e.getMessage());
+      System.out.println();
+    }
     System.out.println("프로그램 정상 종료"); // 출력되지 않는다.
   }
 }
