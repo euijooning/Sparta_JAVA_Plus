@@ -9,11 +9,11 @@ public class _02_Catch {
       // arr[5] = 100;
       String s = null;
       s.toLowerCase();
-    } catch (ArithmeticException e) {
-      System.out.println("뭔가 잘못 계산을 하셨네요.");
+    } catch (ArithmeticException  | ArrayIndexOutOfBoundsException e) {
+      System.out.println("뭔가 실수하셨네요.");
 
-    } catch (ArrayIndexOutOfBoundsException e) {
-      System.out.println("인덱스를 잘못 설정했어요.");
+   // } catch (ArrayIndexOutOfBoundsException e) {
+    //  System.out.println("뭔가 실수하셨네요.");
 
     } catch (ClassCastException e) {
       System.out.println("잘못된 형변환입니다.");
