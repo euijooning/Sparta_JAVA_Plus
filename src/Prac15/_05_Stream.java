@@ -3,6 +3,7 @@ package Prac15;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -112,6 +113,37 @@ public class _05_Stream {
     System.out.println(allMatch1); // false  출력 : 자바 때문에...
     System.out.println("----------");
 
-  }
+  // Day18 이어서
+    //4글자 이하의 언어 중에서 c라는 글자를 포함하는 언어 뒤에 "어려워요" 라는 글자를 함께 출력
+    // map 사용
+    langList.stream()
+        .filter(x -> x.length() <= 4)
+        .filter(x-> x.contains("c"))
+        .map(x -> x + "(어려워요)")
+        .forEach(System.out::println);
+    System.out.println("----------------");
+
+    // 결과물을 대문자로 바꾸기
+    // c라는 글자를 포함하는 언어를 대문다로 출력
+    langList.stream()
+        .filter(x -> x.contains("c"))
+        .map(String::toUpperCase)
+        .forEach(System.out::println);
+    System.out.println("------------------");
+
+    // c라는 글자를 포함하는 언어를 대문자로 변경하여 리스트로 저장하기
+    List<String> langListStartsWithC = langList.stream()
+        .filter(x -> x.contains("c"))
+        .map(String::toUpperCase)
+        .collect(Collectors.toList());
+    langListStartsWithC.stream().forEach(System.out::println);
+
+
+
+
+    }
+
 
 }
+
+
