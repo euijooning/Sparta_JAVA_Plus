@@ -23,7 +23,8 @@ public class _01_TryCatch {
 
     // 예외처리 문법
     try {
-      System.out.println(3/0);
+      Object obj = "test";
+      System.out.println((int)obj);
     } catch (Exception e) {
       System.out.println("이런 문제가 발생했어요 => " + e.getMessage());
       System.out.println();
@@ -32,8 +33,3 @@ public class _01_TryCatch {
   }
 }
 
-class S18 {
-  public void methodA() {
-    this.methodA();
-  }
-}
