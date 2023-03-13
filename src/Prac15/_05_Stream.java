@@ -150,20 +150,20 @@ public class _05_Stream {
 
 // ----------------------------------------------------------------------------------------------------------
 
-
-
-  // Day18 이어서
+    // Day18 이어서
     //4글자 이하의 언어 중에서 c라는 글자를 포함하는 언어 뒤에 "어려워요" 라는 글자를 함께 출력
     // map 사용
+//map은 우리가 사용하는 데이터를 어떤 원하는 형태로 가공을 하거나, 그 데이터가 객체라고 하면
+// 그 객체 중에서 꺼내고자 하는 인스턴스들을 지정해주는 역할을 한다.
     langList.stream()
         .filter(x -> x.length() <= 4)
         .filter(x-> x.contains("c"))
-        .map(x -> x + "(어려워요)")
+        .map(x -> x + "(어려워요)") // x뒤에 "(어려워요)" 를 붙여서 출력함.
         .forEach(System.out::println);
     System.out.println("----------------");
 
     // 결과물을 대문자로 바꾸기
-    // c라는 글자를 포함하는 언어를 대문다로 출력
+    // c라는 글자를 포함하는 언어를 대문자로 출력
     langList.stream()
         .filter(x -> x.contains("c"))
         .map(String::toUpperCase)
@@ -171,12 +171,19 @@ public class _05_Stream {
     System.out.println("------------------");
 
     // c라는 글자를 포함하는 언어를 대문자로 변경하여 리스트로 저장하기
+    //langList.stream() .filter~ 이거를 ctrl + alt + v 해서 변
     List<String> langListStartsWithC = langList.stream()
         .filter(x -> x.contains("c"))
         .map(String::toUpperCase)
         .collect(Collectors.toList());
     langListStartsWithC.stream().forEach(System.out::println);
+/*
+여기서 중요한 부분은, 우리가 이런 작업을 할 때, stream을 한 번 사용하게 되면, 다시 사용할 수가 없기 때문에,
+매번 새로 만들어서 사용해야 한다는 것.
 
+또한 스트림을 쓴다고 해서 원본 데이터가 훼손이 되거나 변경이 되는 것은 아니다.
+스트림을 만들 때마다 원본 데이터로 만들기 때문에, 원본 데이터를 가지고 새롭게 작업을 할 수 있으니까 스트림은 마음껏 쓰셔도 괜찮습니다.
+ */
     }
 }
 
