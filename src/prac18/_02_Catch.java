@@ -43,6 +43,7 @@ public class _02_Catch {
     System.out.println("프로그램 정상 종료");
      */
 
+    /*
     // 아까 했던 예시 3
     try {
       Object obj = "test";
@@ -62,6 +63,28 @@ public class _02_Catch {
       e.printStackTrace();
     }
     System.out.println("프로그램 정상 종료");
+     */
+
+    // 예시 3 수정
+    try {
+      String s = null;
+      s.toLowerCase(); // NullPointException 뜰 거야.
+
+    } catch (ArithmeticException e) {
+      System.out.println("뭔가 잘못 계산하셨네요.");
+
+    } catch (ArrayIndexOutOfBoundsException e) {
+      System.out.println("인덱스를 잘못 설정했어요.");
+
+    } catch (ClassCastException e) {
+      System.out.println("잘못된 형 변환입니다.");
+
+    } catch (Exception e) {
+      System.out.println("그 외의 모든 에러는 여기서 처리가 돼요.");
+      e.printStackTrace();
+    }
+    System.out.println("프로그램 정상 종료");
+
   }
 
 }
