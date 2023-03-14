@@ -24,6 +24,7 @@ public class _02_Catch {
   }
 
      */
+    /*
     // 아까 했던 예시 2)
     try {
       int[] arr = new int[3];
@@ -40,7 +41,27 @@ public class _02_Catch {
       e.printStackTrace();
     }
     System.out.println("프로그램 정상 종료");
+     */
 
+    // 아까 했던 예시 3
+    try {
+      Object obj = "test";
+      System.out.println((int)obj);
+
+    } catch (ArithmeticException e) {
+      System.out.println("뭔가 잘못 계산하셨네요."); // 이건 건너뜀
+
+    } catch (ArrayIndexOutOfBoundsException e) {
+      System.out.println("인덱스를 잘못 설정했어요."); // 이것도 건너뜀.
+
+    } catch (ClassCastException e) {
+      System.out.println("잘못된 형 변환입니다."); // 여기서 처리
+
+    } catch (Exception e) {
+      System.out.println("이런 문제가 발생했어요 => " + e.getMessage());
+      e.printStackTrace();
+    }
+    System.out.println("프로그램 정상 종료");
   }
 
 }
