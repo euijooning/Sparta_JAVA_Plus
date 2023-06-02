@@ -10,7 +10,7 @@ public class _04_Finally {
     } catch (Exception e) {
       System.out.println("!! 문제 발생: " + e.getMessage());
     } finally {
-      System.out.println("택시 문을 닫는다.");
+      System.out.println("택시 문을 닫는다."); // 무조건 마지막으로 실행해야 하는 코드
     }
     // 어쨌건, finally는 마지막으로 실행된다!!!
     // try 구문에서 하던 것을 정리하는 구문을 넣어주면 된다.

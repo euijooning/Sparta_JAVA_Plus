@@ -4,7 +4,7 @@ import java.io.BufferedWriter;
 
 public class _05_TryWithResources {
   public static void main(String[] args) {
-    MyFileWriter writer1 = null;
+    MyFileWriter writer1 = null; //현재는 객체가 없는 상태
 
     try {
       writer1 = new MyFileWriter(); // 객체 생성
@@ -45,7 +45,7 @@ class MyFileWriter implements AutoCloseable {
   BufferedWriter bw = null;
 
 
-  public void write(String line) {
+  public void write(String line) { //파일을 쓰는 메서드
     System.out.println("파일의 내용을 입력합니다.");
     System.out.println("입력 내용: " + line);
   }

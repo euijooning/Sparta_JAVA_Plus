@@ -12,7 +12,7 @@ public class _07_Throws {
     } catch (IOException e) {
       // throw new RuntimeException(e);
       e.printStackTrace();
-      System.out.println("메인 메소드에서 해결할게요.");
+      System.out.println("메인 메서드에서 해결할게요.");
     }
   }
   // 파일에다가 어떤 내용을 쓰는 동작을 하겠다.
@@ -43,4 +43,8 @@ public class _07_Throws {
 이건 기존에 했던 예외처리와 좀 다른 방법.
 우리가 지금 main 메서드에서 writeFile이라는 메서드를 호출을 하는데, 여기 안에서 문제가 발생한다고 하면
 이 메서드를 호출한 main 메서드에서 자체적으로 해결하는 방법.
+
+더 풀어서 말하면 파일을 만들다가(test.txt) 어떤 문제가 발생했는데,
+이 문제를 writeFile()에서 던지고(throws IOExcepteion),이걸 통해 이 메서드를 호출한쪽(main)으로 Exception을 던지니까,
+이걸 main의 catch에서 받아서 처리하고 출력을 해준다는 것.
  */
